@@ -1,0 +1,16 @@
+@import '../utilities/helpers';
+@import '../utilities/variables';
+
+// buttons styles
+
+.ui.button {
+
+	&.primary {
+		background: @primary-color;
+
+    &:hover,
+		&:focus {
+			background: @secondary-color;
+		}
+	}
+}

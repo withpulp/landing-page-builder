@@ -1,0 +1,37 @@
+@import '../utilities/variables';
+
+// helpers
+
+.hidden {
+  display: none !important;
+}
+
+// typography
+
+.aligned {
+  &.center {
+    text-align: center;
+  }
+
+  &.left {
+    text-align: left;
+  }
+
+  &.right {
+    text-align: right;
+  }
+}
+
+.link {
+  &.unstyled {
+    color: inherit;
+  }
+
+  &.no-underline {
+    text-decoration: none;
+  }
+
+  &.no-hover-styles:hover {
+    color: inherit;
+  }
+}

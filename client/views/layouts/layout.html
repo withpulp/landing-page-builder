@@ -1,11 +1,13 @@
 <template name="layout">
-  <main class="layout">
+  <main class="ui layout">
     <header class="header">
       {{> header}}
-    </header>
-    <section class="yield">
       {{> flashMessages}}
-      {{> yield}}
+    </header>
+    <section class="ui yield stackable page grid">
+      <div class="column">
+        {{> yield}}
+      </div>
     </section>
     <footer class="footer">
       {{> footer}}

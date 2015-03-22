@@ -1,0 +1,17 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+useraccounts:semantic-ui
+semantic:ui-css
+natestrauser:animate-css
+momentjs:moment
+less
+iron:router
+fastclick
+accounts-password
+mrt:flash-messages
+manuelschoebel:ms-seo

@@ -27,7 +27,7 @@ Demo here: [lpb.meteor.com](http://lpb.meteor.com).
 
 * Markdown editor for home and posts views
 * Edit header and footer content
-* Login/Register and OAUTH (facebook, twitter, google)
+* Admin login
 
 ## How to use
 

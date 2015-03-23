@@ -22,4 +22,10 @@ Router.route('/posts/:_id', {
 }, function () {
   SEO.set({ title: Meteor.App.NAME });
 });
+
+Router.route('/posts/:postsLimit?', {
+  name: 'posts'
+}, function () {
+  SEO.set({ title: Meteor.App.NAME });
+});
 */

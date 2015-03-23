@@ -93,6 +93,7 @@ BrowserPolicy.content.allowOriginForAll(YOUR_URL);
   * [fastclick](https://github.com/meteor/meteor/tree/devel/packages/fastclick)
   * [natestrauser:animate-css](https://github.com/nate-strauser/meteor-animate-css/)
   * [semantic:ui-css](https://github.com/Semantic-Org/Semantic-UI-CSS/)
+  * [markdown](https://atmospherejs.com/meteor/markdown)
 * Security
   * [browser-policy](https://github.com/meteor/meteor/tree/devel/packages/browser-policy)
 * SEO

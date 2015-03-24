@@ -1,0 +1,20 @@
+<template name="editor">
+	<!-- {{#if preview}} -->
+	<!-- {{else}} -->
+	  {{#if noContent}}
+		  <h2>Create Content</h2>
+			<div class="ui form">
+			  <div class="field">
+					<textarea name="edit" class="create content">{{content}}</textarea>
+			  </div>
+				<div class="action">
+					<div class="ui positive create button">Create</div>
+				</div>
+			</div>
+		{{else}}
+		  <h2>Edit Content</h2>
+		  <textarea name="edit" class="edit content">{{content}}</textarea>
+		  <div class="ui positive edit button">Update</div>
+		{{/if}}
+	<!-- {{/if}} -->
+</template>

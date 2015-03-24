@@ -3,6 +3,12 @@ Template.home.rendered = function () {
   Session.set('md', content);
 };
 
+Template['home'].helpers({
+  contents: function() {
+    return Home.find({}, {sort: {submitted: -1}});
+  }
+});
+
 Template['home'].events({
 	'keyup .edit.content': function(e) {
 		e.preventDefault();

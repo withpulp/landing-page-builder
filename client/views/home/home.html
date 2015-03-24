@@ -1,7 +1,13 @@
 <template name="home">
   <div class="animated fadeIn home">
-    {{#markdown}}{{md 'content'}}{{/markdown}}
-    <textarea name="edit" class="edit content">{{content}}</textarea>
-    <div class="ui positive submit button">Update</div>
+    {{#if currentUser}}
+      {{> editor}}
+    {{else}}
+      {{#if noContent}}
+        There is no content.
+      {{else}}
+        {{> content}}
+      {{/if}}
+    {{/if}}
 	</div>
 </template>

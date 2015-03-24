@@ -1,11 +1,12 @@
 <template name="editor">
 	<!-- {{#if preview}} -->
+	  <button class="logout">logout</button>
 	<!-- {{else}} -->
 	  {{#if noContent}}
 		  <h2>Create Content</h2>
 			<div class="ui form">
 			  <div class="field">
-					<textarea name="edit" class="create content">{{content}}</textarea>
+					<textarea name="edit" class="create content"></textarea>
 			  </div>
 				<div class="action">
 					<div class="ui positive create button">Create</div>
@@ -13,9 +14,10 @@
 			</div>
 		{{else}}
 		  <h2>Edit Content</h2>
+			{{#markdown}}{{session 'post'}}{{/markdown}}
 			<div class="ui form">
 			  <div class="field">
-					<textarea name="edit" class="edit content">{{content}}</textarea>
+					<textarea name="edit" class="edit content">{{post}}</textarea>
 			  </div>
 				<div class="action">
 					<div class="ui positive edit button">Update</div>

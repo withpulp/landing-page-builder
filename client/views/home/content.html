@@ -1,4 +1,6 @@
 <template name="content">
   content
-  {{#markdown}}{{md 'content'}}{{/markdown}}
+  {{#each contents}}
+    {{#markdown}}{{session 'markdown'}}{{/markdown}}
+  {{/each}}
 </template>

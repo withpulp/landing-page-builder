@@ -22,7 +22,7 @@ Template.registerHelper('debug', function (optionalValue) {
   return '';
 });
 
-Template.registerHelper('md', function(input) {
+Template.registerHelper('session', function(input) {
   return Session.get(input);
 });
 

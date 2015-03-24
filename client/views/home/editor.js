@@ -2,12 +2,18 @@ Template.editor.rendered = function() {
 	var post = $('.edit.content').val();
   Session.set('post', post);
 
-	if (Home.find().count() === 0) {
+	if (Contents.find().count() === 0) {
 		Session.set('noContent', true);
   } else {
 		Session.set('noContent', false);
   }
 };
+
+Template['editor'].helpers({
+  contents: function() {
+    return Contents.find();
+  }
+});
 
 Template['editor'].events({
 	'click .create.button': function(e) {
@@ -24,8 +30,8 @@ Template['editor'].events({
 			}
 		};
 
-		Home.insert(newPost);
-		Session.set('noContent', true);
+		Contents.insert(newPost);
+		Session.set('noContent', false);
 		var post = $('.create.content').val();
 	  Session.set('post', post);
 		FlashMessages.sendSuccess('Content created');
@@ -41,7 +47,7 @@ Template['editor'].events({
           updated: now
         };
 
-    Home.update(thisPostId, {$set: postEntry}, function(err) {
+    Contents.update(thisPostId, {$set: postEntry}, function(err) {
       if (err) {
 				FlashMessages.sendError('Error, error!');
         console.log(err.reason);
@@ -49,13 +55,6 @@ Template['editor'].events({
 				FlashMessages.sendSuccess('Post updated');
       }
     });
-	},
-	'keyup .edit.content': function(e) {
-		e.preventDefault();
-		var post = $(e.target).val();
-
-		Session.set('post', '');
-		Session.set('post', post);
 	},
 	'click .logout' : function () {
     Meteor.logout();

@@ -1,12 +1,12 @@
 Router.route('/', {
   name: 'home',
-  data: function() {
-    return Home.find();
-  },
   waitOn: function () {
     return [
-      Meteor.subscribe('home')
+      Meteor.subscribe('contents')
     ]
+  },
+  data: function() {
+    return Contents.find();
   },
   action: function () {
     if (this.ready())

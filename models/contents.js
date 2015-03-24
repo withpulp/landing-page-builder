@@ -1,6 +1,6 @@
-Home = new Mongo.Collection('home');
+Contents = new Mongo.Collection('contents');
 
-Home.allow({
+Contents.allow({
 	'insert': function(userId, doc) {
 		return !!userId;
 	},

@@ -14,10 +14,11 @@
 			</div>
 		{{else}}
 		  <h2>Edit Content</h2>
-			{{#markdown}}{{session 'post'}}{{/markdown}}
 			<div class="ui form">
 			  <div class="field">
-					<textarea name="edit" class="edit content">{{post}}</textarea>
+					{{#each contents}}
+					  <textarea name="edit" class="edit content">{{post}}</textarea>
+					{{/each}}
 			  </div>
 				<div class="action">
 					<div class="ui positive edit button">Update</div>

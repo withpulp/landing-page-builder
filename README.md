@@ -1,6 +1,6 @@
 # Landing Page Builder
 
-Landing Page Builder app built with Meteor.
+Landing Page Builder app built with Meteor. Architecture based on [Meteor-Landing](https://github.com/hudat/meteor-landing).
 
 Demo here: [lpb.meteor.com](http://lpb.meteor.com).
 

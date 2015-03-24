@@ -1,5 +1,7 @@
 <template name="home">
   <div class="animated fadeIn home">
-	  home markdown
+    {{#markdown}}{{md 'content'}}{{/markdown}}
+    <textarea name="edit" class="edit content">{{content}}</textarea>
+    <div class="ui positive submit button">Update</div>
 	</div>
 </template>

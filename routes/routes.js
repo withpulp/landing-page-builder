@@ -1,7 +1,20 @@
 Router.route('/', {
-  name: 'home'
+  name: 'home',
+  data: function() {
+    return Home.find();
+  },
+  waitOn: function () {
+    return [
+      Meteor.subscribe('home')
+    ]
+  },
+  action: function () {
+    if (this.ready())
+      this.render('home');
+    else
+      this.render('loading');
+  }
 }, function () {
-	this.render('home');
   SEO.set({ title: Meteor.App.NAME });
 });
 /*

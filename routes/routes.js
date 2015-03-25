@@ -17,6 +17,21 @@ Router.route('/', {
 }, function () {
   SEO.set({ title: Meteor.App.NAME });
 });
+
+Router.route('/admin/new', {
+  name: 'new'
+}, function () {
+  this.render('new');
+  SEO.set({ title: Meteor.App.NAME });
+});
+
+Router.route('/admin/edit', {
+  name: 'edit'
+}, function () {
+  this.render('edit');
+  SEO.set({ title: Meteor.App.NAME });
+});
+
 /*
 Router.route('/posts/:_id', {
   name: 'post',

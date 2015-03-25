@@ -1,0 +1,9 @@
+<template name="admin">
+	<div class="ui admin widget">
+		{{#if noContent}}
+		  <a class="ui green basic tiny button" href="{{pathFor 'new'}}">New</a>
+		{{else}}
+	    <a class="ui orange basic tiny button" href="{{pathFor 'edit'}}">Edit</a>
+		{{/if}}
+	</div>
+</template>

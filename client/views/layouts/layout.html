@@ -3,6 +3,9 @@
     <header class="header">
       {{> header}}
       {{> flashMessages}}
+      {{#if currentUser}}
+        {{> admin}}
+      {{/if}}
     </header>
     <section class="ui hero vertical segment">
       {{> hero}}

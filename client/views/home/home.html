@@ -1,13 +1,9 @@
 <template name="home">
   <div class="animated fadeIn home">
-    {{#if currentUser}}
-      {{> editor}}
+    {{#if noContent}}
+      There is no content.
     {{else}}
-      {{#if noContent}}
-        There is no content.
-      {{else}}
-        {{> content}}
-      {{/if}}
+      {{> content}}
     {{/if}}
 	</div>
 </template>

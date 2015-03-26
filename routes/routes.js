@@ -19,9 +19,22 @@ Router.route('/', {
 });
 
 Router.route('/admin', {
-  name: 'admin'
+  name: 'admin',
+  waitOn: function () {
+    return [
+      Meteor.subscribe('contents')
+    ]
+  },
+  data: function() {
+    return Contents.find();
+  },
+  action: function () {
+    if (this.ready())
+      this.render('admin');
+    else
+      this.render('loading');
+  }
 }, function () {
-  this.render('admin');
   SEO.set({ title: Meteor.App.NAME });
 });
 

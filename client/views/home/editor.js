@@ -55,8 +55,5 @@ Template['editor'].events({
 				FlashMessages.sendSuccess('Post updated');
       }
     });
-	},
-	'click .logout' : function () {
-    Meteor.logout();
-  }
+	}
 });

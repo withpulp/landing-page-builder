@@ -18,17 +18,10 @@ Router.route('/', {
   SEO.set({ title: Meteor.App.NAME });
 });
 
-Router.route('/admin/new', {
-  name: 'new'
+Router.route('/admin', {
+  name: 'admin'
 }, function () {
-  this.render('new');
-  SEO.set({ title: Meteor.App.NAME });
-});
-
-Router.route('/admin/edit', {
-  name: 'edit'
-}, function () {
-  this.render('edit');
+  this.render('admin');
   SEO.set({ title: Meteor.App.NAME });
 });
 

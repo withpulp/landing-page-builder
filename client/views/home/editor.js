@@ -11,18 +11,17 @@ Template['editor'].events({
 		e.preventDefault();
 		var now = Date.now();
 
-		var newPost = {
-			post: $('.create.content').val(),
+		var newContent = {
+			content: $('.create.content').val(),
 			date: now,
 			updated: now,
 			author: Meteor.userId(),
-			postCall: function() {
-				return this.post;
+			contentCall: function() {
+				return this.content;
 			}
 		};
 
-		Contents.insert(newPost);
-		Session.set('noContent', false);
+		Contents.insert(newContent);
 		Router.go('home');
 		FlashMessages.sendSuccess('Content created');
 	},
@@ -31,19 +30,19 @@ Template['editor'].events({
 
 		var now = Date.now();
 
-    var thisPostId = this._id,
-		    postEntry = {
-          post: $('.edit.content').val(),
+    var thisContentId = this._id,
+		    contentEntry = {
+          content: $('.edit.content').val(),
           updated: now
         };
 
-    Contents.update(thisPostId, {$set: postEntry}, function(err) {
+    Contents.update(thisContentId, {$set: contentEntry}, function(err) {
       if (err) {
 				FlashMessages.sendError('Error, error!');
         console.log(err.reason);
       } else {
 				Router.go('home');
-				FlashMessages.sendSuccess('Post updated');
+				FlashMessages.sendSuccess('Content updated');
       }
     });
 	}

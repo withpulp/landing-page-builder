@@ -22,10 +22,6 @@ Template.registerHelper('debug', function (optionalValue) {
   return '';
 });
 
-Template.registerHelper('session', function(input) {
-  return Session.get(input);
-});
-
 Template.registerHelper('noContent', function() {
   return Session.get('noContent');
 });

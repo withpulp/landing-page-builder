@@ -4,9 +4,28 @@
 // alerts styles
 
 .alert {
-  background: @gray-lighter;
+  padding: 1em;
+  background: fade(@gray-lighter, 50%);
+  font-size: @font-size-x-large;
+  text-align: center;
 
 	&.alert-success {
     color: @positive-color;
+  }
+
+  &.alert-error {
+    color: @negative-color;
+  }
+
+  &.alert-warning {
+    color: @caution-color;
+  }
+
+  &.alert-info {
+    color: @highlight-color;
+  }
+
+  .close {
+    display: none;
   }
 }

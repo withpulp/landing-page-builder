@@ -55,7 +55,7 @@ reactive-var@1.0.5
 reload@1.1.3
 retry@1.0.3
 routepolicy@1.0.5
-semantic:ui-css@1.11.4
+semantic:ui-css@1.11.5
 service-configuration@1.0.4
 session@1.1.0
 sha@1.0.3

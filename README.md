@@ -86,6 +86,7 @@ BrowserPolicy.content.allowOriginForAll(YOUR_URL);
   * [meteor-platform](https://github.com/meteor/meteor/tree/devel/packages/meteor-platform)
 * Routing
   * [iron:router](https://github.com/EventedMind/iron-router)
+  * [zimme:iron-router-active](https://github.com/zimme/meteor-iron-router-active)
 * Accounts
   * [accounts-password](https://github.com/meteor/meteor/tree/devel/packages/accounts-password)
   * [useraccounts:semantic-ui](https://github.com/meteor-useraccounts/semantic-ui)

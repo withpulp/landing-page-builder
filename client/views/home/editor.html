@@ -1,29 +1,25 @@
 <template name="editor">
-	<!-- {{#if preview}} -->
-	  <button class="logout">logout</button>
-	<!-- {{else}} -->
-	  {{#if noContent}}
-		  <h2>Create Content</h2>
-			<div class="ui form">
-			  <div class="field">
-					<textarea name="edit" class="create content"></textarea>
-			  </div>
-				<div class="action">
-					<div class="ui positive create button">Create</div>
-				</div>
+	{{#if noContent}}
+		<h2>Create Content</h2>
+	  <div class="ui form">
+			<div class="field">
+			  <textarea name="edit" class="create content"></textarea>
 			</div>
-		{{else}}
-		  <h2>Edit Content</h2>
-			<div class="ui form">
-			  <div class="field">
-					{{#each contents}}
-					  <textarea name="edit" class="edit content">{{post}}</textarea>
-					{{/each}}
-			  </div>
-				<div class="action">
-					<div class="ui positive edit button">Update</div>
-				</div>
+		  <div class="action">
+				<div class="ui positive create button">Create</div>
 			</div>
-		{{/if}}
-	<!-- {{/if}} -->
+		</div>
+	{{else}}
+		<h2>Edit Content</h2>
+		<div class="ui form">
+			<div class="field">
+				{{#each contents}}
+					<textarea name="edit" class="edit content">{{post}}</textarea>
+				{{/each}}
+			</div>
+		  <div class="action">
+				<div class="ui positive edit button">Update</div>
+			</div>
+		</div>
+	{{/if}}
 </template>

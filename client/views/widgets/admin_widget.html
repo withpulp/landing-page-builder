@@ -1,6 +1,7 @@
 <template name="adminWidget">
 	<div class="ui admin widget">
-	  <a class="ui orange basic tiny button" href="{{pathFor 'admin'}}">Edit</a>
-		<a class="ui red basic tiny logout button">Logout</a>
+	  <a class="ui orange basic mini button {{isActiveRoute regex='admin'}}" href="{{pathFor 'admin'}}">Edit</a>
+		<a class="ui green basic mini button {{isActiveRoute regex='home'}}" href="{{pathFor 'home'}}">Preview</a>
+		<a class="ui red basic mini logout button">Logout</a>
 	</div>
 </template>

@@ -2,10 +2,10 @@
   <main class="ui layout">
     <header class="header">
       {{> header}}
-      {{> flashMessages}}
       {{#if currentUser}}
         {{> adminWidget}}
       {{/if}}
+      {{> flashMessages}}
     </header>
     <section class="ui hero vertical segment">
       {{> hero}}

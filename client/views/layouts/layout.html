@@ -1,22 +1,28 @@
 <template name="layout">
   <main class="ui layout">
     <header class="header">
-      {{> header}}
+      {{#if notAdmin}}
+        {{> header}}
+      {{/if}}
       {{#if currentUser}}
         {{> adminWidget}}
       {{/if}}
       {{> flashMessages}}
     </header>
-    <section class="ui hero vertical segment">
-      {{> hero}}
-    </section>
+    {{#if notAdmin}}
+      <section class="ui hero vertical animated fadeIn segment">
+        {{> hero}}
+      </section>
+    {{/if}}
     <section class="ui yield stackable page grid">
       <div class="view column">
         {{> yield}}
       </div>
     </section>
-    <footer class="footer">
-      {{> footer}}
-    </footer>
+    {{#if notAdmin}}
+      <footer class="footer">
+        {{> footer}}
+      </footer>
+    {{/if}}
   </main>
 </template>

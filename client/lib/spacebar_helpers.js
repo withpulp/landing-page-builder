@@ -22,6 +22,10 @@ Template.registerHelper('debug', function (optionalValue) {
   return '';
 });
 
+Template.registerHelper('notAdmin', function() {
+  return Session.get('notAdmin');
+});
+
 Template.registerHelper('noContent', function() {
   return Session.get('noContent');
 });

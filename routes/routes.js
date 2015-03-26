@@ -1,12 +1,12 @@
 Router.route('/', {
   name: 'home',
+  data: function() {
+    return Contents.findOne({userId: this.userId});
+  },
   waitOn: function () {
     return [
-      Meteor.subscribe('contents')
+      Meteor.subscribe('contents', 'admin')
     ]
-  },
-  data: function() {
-    return Contents.find();
   },
   action: function () {
     if (this.ready())
@@ -20,13 +20,13 @@ Router.route('/', {
 
 Router.route('/admin', {
   name: 'admin',
+  data: function() {
+    return Contents.findOne({userId: this.userId});
+  },
   waitOn: function () {
     return [
-      Meteor.subscribe('contents')
+      Meteor.subscribe('contents', 'admin')
     ]
-  },
-  data: function() {
-    return Contents.find();
   },
   action: function () {
     if (this.ready())

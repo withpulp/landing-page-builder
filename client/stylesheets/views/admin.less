@@ -11,6 +11,29 @@
 
 			.field {
 
+        &.title {
+          margin: 1em 0 0;
+
+          &.sub {
+            margin: 0 0 1em;
+          }
+
+          .title {
+            padding: 0;
+            border: 0;
+            box-shadow: none;
+            font-size: @font-size-x-large;
+            font-weight: bold;
+            text-align: center;
+
+            &.sub {
+              color: fade(@dark, 50%);
+              font-size: @font-size-larger;
+              font-weight: normal;
+            }
+          }
+        }
+
 			  textarea.content {
 					max-height: 100vh;
           padding: 0;

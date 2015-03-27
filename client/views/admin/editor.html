@@ -1,7 +1,13 @@
 <template name="editor">
 	{{#if noContent}}
 	  <div class="ui create form">
-			<div class="field">
+			<div class="title field">
+        <input type="text" name="title" class="create title" placeholder="Write your title" />
+			</div>
+			<div class="sub title field">
+        <input type="text" name="subtitle" class="create sub title" placeholder="Write your sub title" />
+			</div>
+			<div class="markdown field">
 			  <textarea name="create" class="create content" placeholder="No content was found, create some using markdown"></textarea>
 			</div>
 		  <div class="action">
@@ -10,6 +16,12 @@
 		</div>
 	{{else}}
 		<div class="ui edit form">
+			<div class="title field">
+        <input type="text" name="title" class="edit title" value="{{title}}" />
+			</div>
+			<div class="sub title field">
+        <input type="text" name="subtitle" class="edit sub title" value="{{subtitle}}" />
+			</div>
 			<div class="field">
 				<textarea name="edit" class="edit content">{{content}}</textarea>
 			</div>

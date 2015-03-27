@@ -4,7 +4,9 @@ Template.editor.rendered = function() {
   } else {
 		Session.set('noContent', false);
   }
-	$('textarea.content').elastic();
+
+	var $editor = $('textarea.content');
+	$editor.elastic();
 };
 
 Template['editor'].events({

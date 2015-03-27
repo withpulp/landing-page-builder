@@ -1,15 +1,15 @@
 <template name="editor">
 	{{#if noContent}}
-	  <div class="ui form">
+	  <div class="ui create form">
 			<div class="field">
-			  <textarea name="edit" class="create content" placeholder="No content was found, create some using markdown"></textarea>
+			  <textarea name="create" class="create content" placeholder="No content was found, create some using markdown"></textarea>
 			</div>
 		  <div class="action">
 				<div class="ui positive create button">Create</div>
 			</div>
 		</div>
 	{{else}}
-		<div class="ui form">
+		<div class="ui edit form">
 			<div class="field">
 				<textarea name="edit" class="edit content">{{content}}</textarea>
 			</div>

@@ -27,20 +27,10 @@
 	        <div class="content column">
 						<input type="text" name="herotitle" class="edit hero title" placeholder="Hero Title" value="{{heroTitle}}" />
 						<textarea name="herocontent" class="edit hero content" placeholder="Hero content">{{heroContent}}</textarea>
-	          <img class="ui small centered image" src="http://placehold.it/320x400">
+	          <img class="ui small centered image" src="{{heroImage}}">
 	        </div>
 	        <div class="form column">
-	          <form class="ui form segment">
-		          <h2 class="ui dividing header">Subscribe</h2>
-		          <div class="field">
-		            <label>Full Name</label>
-		            <input type="text" name="name" placeholder="Full Name">
-		          </div>
-		          <div class="field">
-	              <label>Email</label>
-		            <input type="email" name="email" placeholder="Email">
-		          </div>
-	          </form>
+						{{> subscribe}}
 	        </div>
 	      </div>
 	    </section>

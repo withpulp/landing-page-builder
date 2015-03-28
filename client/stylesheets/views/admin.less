@@ -34,11 +34,34 @@
             }
           }
         }
+
+        &.markdown {
+          margin: 2rem 0 1em;
+        }
       }
 
       .ui.hero.segment {
         margin: 0 -1em;
         padding: 1em;
+
+        .content {
+
+          .hero.title {
+            padding: 0;
+            margin-bottom: 1rem;
+            border: 0;
+            background: transparent;
+            box-shadow: none;
+            font-size: @font-size-large;
+            font-weight: bold;
+            text-align: center;
+          }
+
+          .hero.content {
+            margin-bottom: 1rem;
+            text-align: center;
+          }
+        }
       }
 
       textarea.content {

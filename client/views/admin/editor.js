@@ -15,7 +15,7 @@ Template['editor'].events({
 		var now = Date.now();
 
 		var newContent = {
-			content: $('.create.content').val(),
+			content: $('.markdown .create.content').val(),
 			date: now,
 			updated: now,
 			author: Meteor.userId(),
@@ -35,7 +35,7 @@ Template['editor'].events({
 
     var thisContentId = this._id,
 		    contentEntry = {
-          content: $('.edit.content').val(),
+          content: $('.markdown .edit.content').val(),
           updated: now
         };
 

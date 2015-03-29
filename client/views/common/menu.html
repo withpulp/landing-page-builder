@@ -10,7 +10,9 @@
 			</div>
 		</div>
 		<div class="right item">
-			Buttons
+			<a class="ui basic orange button {{isActiveRoute regex='admin'}}" href="{{pathFor 'admin'}}">Edit</a>
+			<a class="ui basic red button {{isActiveRoute regex='home'}}" href="{{pathFor 'home'}}">Cancel</a>
+			<a class="ui basic green button">Save</a>
 		</div>
 	</div>
 	<!--If user is on /admin/content show this menu-->

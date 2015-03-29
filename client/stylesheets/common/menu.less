@@ -1,0 +1,61 @@
+@import '../utilities/helpers';
+@import '../utilities/variables';
+
+// menu styles
+
+.ui.layout {
+
+	.ui.admin.menu {
+	  z-index: 1;
+	  border: 0;
+	  background: #E0E0E0;
+		box-shadow: none;
+
+		.item {
+
+      &:before {
+        background: transparent;
+      }
+
+			&.left {
+			  padding-left: 1em !important;
+				text-align: left;
+      }
+
+			&.center {
+
+				.ui.secondary.menu {
+					border: 0;
+
+					.item {
+						width: 50%;
+						margin: 0;
+						padding: 0 0.5em !important;
+						border: 0;
+
+						&.left {
+							text-align: right;
+						}
+
+						&.right {
+							text-align: left;
+						}
+
+						&:hover,
+						&:focus {
+							background: transparent;
+						}
+
+						&.active {
+							background: transparent;
+						}
+					}
+				}
+			}
+
+			&.right {
+				text-align: right;
+			}
+    }
+  }
+}

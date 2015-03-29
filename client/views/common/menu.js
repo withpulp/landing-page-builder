@@ -1,4 +1,4 @@
-Template.adminWidget.rendered = function() {
+Template.menu.rendered = function() {
 	if (Contents.find().count() === 0) {
 		Session.set('noContent', true);
   } else {
@@ -6,7 +6,7 @@ Template.adminWidget.rendered = function() {
   }
 };
 
-Template['adminWidget'].events({
+Template['menu'].events({
 	'click .logout' : function () {
 		Meteor.logout();
 	}

@@ -6,6 +6,7 @@ Template.editor.rendered = function() {
   }
 
 	var $editor = $('textarea.content');
+	
 	$editor.elastic();
 };
 

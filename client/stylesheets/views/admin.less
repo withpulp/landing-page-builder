@@ -7,74 +7,80 @@
 
   .admin {
 
-	  .ui.form {
+    .ui.tab.segment {
+      padding: 0;
+      border: 0;
+      box-shadow: none;
 
-			.field {
+      .ui.form {
 
-        &.title {
-          margin: 1em 0 0;
-          background: transparent;
+  			.field {
 
-          &.sub {
-            margin: 0 0 1em;
-          }
-
-          .title {
-            padding: 0;
-            border: 0;
-            box-shadow: none;
-            font-size: @font-size-x-large;
-            font-weight: bold;
-            text-align: center;
+          &.title {
+            margin: 1em 0 0;
+            background: transparent;
 
             &.sub {
-              color: fade(@dark, 50%);
-              font-size: @font-size-larger;
-              font-weight: normal;
+              margin: 0 0 1em;
+            }
+
+            .title {
+              padding: 0;
+              border: 0;
+              box-shadow: none;
+              font-size: @font-size-x-large;
+              font-weight: bold;
+              text-align: center;
+
+              &.sub {
+                color: fade(@dark, 50%);
+                font-size: @font-size-larger;
+                font-weight: normal;
+              }
+            }
+          }
+
+          &.markdown {
+            margin: 2rem 0 1em;
+          }
+        }
+
+        .ui.hero.segment {
+          margin: 0 -1em;
+          padding: 1em;
+
+          .content {
+
+            .hero.title {
+              padding: 0;
+              margin-bottom: 1rem;
+              border: 0;
+              background: transparent;
+              box-shadow: none;
+              font-size: @font-size-large;
+              font-weight: bold;
+              text-align: center;
+            }
+
+            .hero.content {
+              margin-bottom: 1rem;
+              text-align: center;
             }
           }
         }
 
-        &.markdown {
-          margin: 2rem 0 1em;
+        textarea.content {
+          min-height: 5em;
+          max-height: 100vh;
+          padding: 0;
+          vertical-align: baseline;
+          -webkit-appearance: inherit;
+          resize: none;
+          border: 0;
+          background: transparent;
+          -webkit-box-shadow: none;
+          box-shadow: none;
         }
-      }
-
-      .ui.hero.segment {
-        margin: 0 -1em;
-        padding: 1em;
-
-        .content {
-
-          .hero.title {
-            padding: 0;
-            margin-bottom: 1rem;
-            border: 0;
-            background: transparent;
-            box-shadow: none;
-            font-size: @font-size-large;
-            font-weight: bold;
-            text-align: center;
-          }
-
-          .hero.content {
-            margin-bottom: 1rem;
-            text-align: center;
-          }
-        }
-      }
-
-      textarea.content {
-        min-height: 5em;
-        max-height: 100vh;
-        padding: 0;
-        vertical-align: baseline;
-        -webkit-appearance: inherit;
-        resize: none;
-        border: 0;
-        background: transparent;
-        -webkit-box-shadow: none;
-        box-shadow: none;
       }
     }
   }

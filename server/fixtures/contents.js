@@ -9,7 +9,7 @@ Fixtures.contents = [
     subtitle: 'Subtitle',
     heroTitle: 'Hero Title',
     heroContent: 'This is the hero content',
-    heroImage: 'http://vignette1.wikia.nocookie.net/berserk/images/8/8c/Berserker_Armour_Version_2.png/revision/latest?cb=20120517182924',
+    heroImage: 'http://placekitten.com/200/300',
     newsletter: true,
     mailchimpAPI: 'xxxxxxxxxxxxxxxxxxxxxxx-xxx',
     mailchimpID: 'xxxxxxxxxx',

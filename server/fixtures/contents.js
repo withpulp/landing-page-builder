@@ -9,7 +9,7 @@ Fixtures.contents = [
     subtitle: 'Subtitle',
     heroTitle: 'Hero Title',
     heroContent: 'This is the hero content',
-    heroImage: 'http://placekitten.com/200/300',
+    heroImage: 'http://placekitten.com/200/350',
     newsletter: true,
     mailchimpAPI: 'xxxxxxxxxxxxxxxxxxxxxxx-xxx',
     mailchimpID: 'xxxxxxxxxx',

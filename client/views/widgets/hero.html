@@ -1,9 +1,9 @@
 <template name="hero">
   <div class="ui two column stackable page grid">
     <div class="content column">
-      <h4>80 days around the world, we'l ending</h4>
-      <p>It's time - we'll fight against the time, and we'll fly on the white wings of the wind. </p>
-      <img class="ui small centered image" src="http://placehold.it/320x400" />
+      <h4>{{heroTitle}}</h4>
+      <p>{{heroContent}}</p>
+      <img class="ui small centered image" src="{{heroImage}}" />
     </div>
     <div class="form column">
       {{> subscribe}}

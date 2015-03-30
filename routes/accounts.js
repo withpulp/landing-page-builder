@@ -3,5 +3,5 @@ AccountsTemplates.configureRoute('signIn', {
   path: '/login',
   template: 'login',
   layoutTemplate: 'layout',
-  redirect: '/'
+  redirect: '/admin'
 });

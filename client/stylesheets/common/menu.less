@@ -51,6 +51,14 @@
 						}
 					}
 				}
+
+				@media (max-width: @phone-width) {
+					position: fixed;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					background: @mute-color;
+				}
 			}
 
 			&.right {
@@ -63,6 +71,10 @@
 		        display: none;
 		      }
 				}
+			}
+
+			@media (max-width: @phone-width) {
+				width: 50%;
 			}
     }
   }

@@ -1,7 +1,13 @@
 <template name="menu">
 	<nav class="ui fluid three item fixed admin menu">
-		<div class="left item">
-			Hello, {{currentUser.username}}!
+		<div class="left dropdown item">
+			<div class="ui username dropdown">
+		    <div class="text">{{currentUser.username}}</div>
+		    <i class="dropdown icon"></i>
+		    <div class="menu">
+					<div class="logout item">Logout</div>
+		    </div>
+		  </div>
 		</div>
 		<div class="center item">
 			{{#if notAdmin}}
@@ -11,11 +17,10 @@
 			{{/if}}
 		</div>
 		<div class="right item">
-			<a class="ui basic orange button {{isActiveRoute regex='admin'}}" href="{{pathFor 'admin'}}">Edit</a>
-			<a class="ui basic red button {{isActiveRoute regex='home'}}" href="{{pathFor 'home'}}">Cancel</a>
 			{{#if notAdmin}}
-			  <a class="ui basic red logout button">Logout</a>
+		  	<a class="ui basic orange button {{isActiveRoute regex='admin'}}" href="{{pathFor 'admin'}}">Edit</a>
 			{{else}}
+			  <a class="ui basic red button {{isActiveRoute regex='home'}}" href="{{pathFor 'home'}}">Cancel</a>
 			  <a class="ui basic green button">Save</a>
 			{{/if}}
 		</div>

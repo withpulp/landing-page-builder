@@ -11,3 +11,9 @@ Template['menu'].events({
 		Meteor.logout();
 	}
 });
+
+Template.menu.helpers({
+	'hideSecondaryMenu': function(){
+		$('.ui.secondary.menu').addClass("hidden");
+	}
+});

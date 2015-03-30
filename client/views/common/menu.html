@@ -4,16 +4,16 @@
 			Hello, {{currentUser.username}}!
 		</div>
 		<div class="center item">
-			<div class="ui secondary menu">
-				<a class="active left item" data-tab="first">Content</a>
-				<a class="right item" data-tab="second">Settings</a>
-			</div>
+			{{#if notAdmin}}
+			  Logo
+			{{else}}
+			  {{> tabsMenu}}
+			{{/if}}
 		</div>
 		<div class="right item">
 			<a class="ui basic orange button {{isActiveRoute regex='admin'}}" href="{{pathFor 'admin'}}">Edit</a>
 			<a class="ui basic red button {{isActiveRoute regex='home'}}" href="{{pathFor 'home'}}">Cancel</a>
 			{{#if notAdmin}}
-				{{hideSecondaryMenu}}
 			  <a class="ui basic red logout button">Logout</a>
 			{{else}}
 			  <a class="ui basic green button">Save</a>

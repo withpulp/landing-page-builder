@@ -103,6 +103,7 @@ BrowserPolicy.content.allowOriginForAll(YOUR_URL);
 * Development
   * [less](https://github.com/meteor/meteor/tree/devel/packages/less)
   * [momentjs:moment](https://github.com/moment/moment/)
+  * [msavin:mongol](https://github.com/msavin/Mongol/)
 
 The "insecure" and "autopublish" packages are removed by default (they make your app vulnerable).
 

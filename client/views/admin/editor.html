@@ -11,7 +11,7 @@
 	      <div class="content column">
 					<input type="text" name="herotitle" class="edit hero title" placeholder="Hero Title" value="{{heroTitle}}" />
 					<textarea name="herocontent" class="edit hero content" placeholder="Hero content">{{heroContent}}</textarea>
-	        <img class="ui small centered image" src="{{heroImage}}">
+	        <img class="ui small centered hero image" src="{{heroImage}}">
 	      </div>
 	      <div class="form column">
 				  {{> subscribe}}
@@ -20,9 +20,6 @@
 	  </section>
 	  <div class="markdown field">
 		  <textarea name="edit" class="edit content" placeholder="Write some markdown">{{content}}</textarea>
-		</div>
-		<div class="action">
-			<div class="ui positive edit button">Update</div>
 		</div>
 	</div>
 </template>

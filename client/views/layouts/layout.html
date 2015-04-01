@@ -19,13 +19,11 @@
         {{> yield}}
       </div>
     </section>
-    <section>
-      {{> modal}}
-    </section>
     {{#if notAdmin}}
       <footer class="footer">
         {{> footer}}
       </footer>
     {{/if}}
   </main>
+  {{> modal}}
 </template>

@@ -20,5 +20,32 @@
 	    <label>Mailchimp List ID</label>
 	    <input type="text" name="mailchimpID" class="newsletter id" placeholder="Enter Mailchimp List ID..." value="{{mailchimpID}}">
 	  </div>
+		<h2 class="ui dividing header">Overlay</h2>
+		<div class="inline field">
+			<div class="ui toggle checkbox">
+				<label>Enable Overlay</label>
+			</div>
+			<div class="grouped fields">
+      <label for="alone">When would you like the overlay to trigger?</label>
+      <div class="field">
+        <div class="ui radio checkbox checked">
+          <input type="radio" checked="" name="import">
+          <label>When the page loads</label>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui radio checkbox">
+          <input type="radio" name="import">
+          <label>After 30 seconds</label>
+        </div>
+      </div>
+			<div class="field">
+				<div class="ui radio checkbox">
+					<input type="radio" name="import">
+					<label>After 60 seconds</label>
+				</div>
+			</div>
+    </div>
+		</div>
 	</form>
 </template>

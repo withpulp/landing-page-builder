@@ -5,7 +5,7 @@ Template.editor.rendered = function() {
 		Session.set('noContent', false);
   }
 
-	var $editor = $('textarea.content');
+	var $editor = $('.markdown textarea.content');
 
 	$editor.elastic();
 };

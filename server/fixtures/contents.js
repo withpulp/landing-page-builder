@@ -14,7 +14,7 @@ Fixtures.contents = [
     mailchimpAPI: 'xxxxxxxxxxxxxxxxxxxxxxx-xxx',
     mailchimpID: 'xxxxxxxxxx',
     content: '##The story begins!\n\nHe lived, he scratched up my furniture. He ate for free and always hated when I tried to pet him. Scratched me a bunch of times. Then he grew old and died. He was the best cat ever. The end.',
-    date: now,
+    created: now,
     updated: now,
     author: admin,
     contentCall: function() {

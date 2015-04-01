@@ -1,12 +1,22 @@
 <template name="hero">
-  <div class="ui two column stackable page grid">
-    <div class="content column">
-      <h4>{{heroTitle}}</h4>
-      <p>{{heroContent}}</p>
-      <img class="ui small centered image" src="{{heroImage}}" />
+  {{#if newsletter}}
+    <div class="ui two column stackable page grid">
+      <div class="content column">
+        <h4>{{heroTitle}}</h4>
+        <p>{{heroContent}}</p>
+        <img class="ui small centered image" src="{{heroImage}}" />
+      </div>
+      <div class="form column">
+        {{> subscribe}}
+      </div>
     </div>
-    <div class="form column">
-      {{> subscribe}}
+  {{else}}
+    <div class="ui stackable page grid">
+      <div class="content column">
+        <h4>{{heroTitle}}</h4>
+        <p>{{heroContent}}</p>
+        <img class="ui small centered image" src="{{heroImage}}" />
+      </div>
     </div>
-  </div>
+  {{/if}}
 </template>

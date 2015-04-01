@@ -26,6 +26,6 @@ Template.registerHelper('notAdmin', function() {
   return Session.get('notAdmin');
 });
 
-Template.registerHelper('noNewsletter', function() {
-  return Session.get('noNewsletter');
+Template.registerHelper('newsletter', function() {
+  return Session.get('newsletter');
 });

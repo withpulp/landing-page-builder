@@ -39,6 +39,8 @@ less@1.0.14
 livedata@1.0.13
 localstorage@1.0.3
 logging@1.0.7
+manuel:reactivearray@1.0.4
+manuel:viewmodel@1.4.0
 manuelschoebel:ms-seo@0.4.1
 markdown@1.0.4
 meteor@1.1.6

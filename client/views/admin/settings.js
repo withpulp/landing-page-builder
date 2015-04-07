@@ -9,6 +9,15 @@ Template.settings.rendered = function () {
   // }
 // });
 
-Template.settings.viewmodel({
-  on: 'false'
+// Template.settings.viewmodel({
+  // on: 'false'
+// });
+
+Template.settings.events({
+'click .checkbox': function(event, template) {
+  console.log("clicking works");
+  // var x = template.$('input').is(":checked").val();
+  // Session.set("statevalue", x);
+  // console.log(Session.get("statevalue"));
+ }
 });

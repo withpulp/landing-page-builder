@@ -17,6 +17,7 @@ Template['menu'].events({
 					heroTitle: $('.hero .hero.title').val(),
 					heroContent: $('.hero .hero.content').val(),
 					heroImage: $('.settings .hero.image').val(),
+					overlay: $('.settings .overlay.toggle:checked').prop(),
 					newsletter: $('.settings .newsletter.toggle:checked').val(),
 					mailchimpAPI: $('.settings .newsletter.api').val(),
 					mailchimpID: $('.settings .newsletter.id').val(),

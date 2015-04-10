@@ -90,6 +90,8 @@ BrowserPolicy.content.allowOriginForAll(YOUR_URL);
 * Accounts
   * [accounts-password](https://github.com/meteor/meteor/tree/devel/packages/accounts-password)
   * [useraccounts:semantic-ui](https://github.com/meteor-useraccounts/semantic-ui)
+* Collections
+  * [aldeed:autoform](https://github.com/aldeed/meteor-autoform)
 * UI and UX
   * [fastclick](https://github.com/meteor/meteor/tree/devel/packages/fastclick)
   * [natestrauser:animate-css](https://github.com/nate-strauser/meteor-animate-css/)

@@ -11,3 +11,11 @@ Contents.allow({
 		return !!userId;
 	}
 });
+
+Contents.attachSchema(new SimpleSchema({
+	title: {
+		type: String,
+		label: 'Title',
+		max: 100
+	}
+}));

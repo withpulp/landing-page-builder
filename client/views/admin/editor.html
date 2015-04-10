@@ -1,4 +1,8 @@
 <template name="editor">
+	{{#autoForm collection='Contents' doc=this class='ui edit form' id='editContent' type='update' autosave=autoSaveMode validation='keyup'}}
+    {{> afQuickField name="title" class="edit title" placeholder="Title"}}
+	{{/autoForm}}
+	<!--
 	<div class="ui edit form">
 		<div class="title field">
 	    <input type="text" name="title" class="edit title" placeholder="Title" value="{{title}}" autofocus />
@@ -32,4 +36,5 @@
 		  <textarea name="edit" class="edit content" placeholder="Write some markdown">{{content}}</textarea>
 		</div>
 	</div>
+  -->
 </template>

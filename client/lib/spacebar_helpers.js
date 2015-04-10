@@ -29,3 +29,7 @@ Template.registerHelper('notAdmin', function() {
 Template.registerHelper('newsletter', function() {
   return Session.get('newsletter');
 });
+
+Template.registerHelper('overlay', function() {
+  return Session.get('overlay');
+});

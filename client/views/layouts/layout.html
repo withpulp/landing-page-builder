@@ -25,5 +25,7 @@
       </footer>
     {{/if}}
   </main>
-  {{> modal}}
+  {{#if overlay}}
+    {{> modal}}
+  {{/if}}
 </template>

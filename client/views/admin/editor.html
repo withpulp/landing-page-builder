@@ -3,13 +3,13 @@
 	  <div class="title field">
 			{{> afFieldInput name="title"}}
 			{{#if afFieldIsInvalid name='title'}}
-	      <span class="negative alert">{{{afFieldMessage name='title'}}}</span>
+	      <div class="alert alert-info">{{{afFieldMessage name='title'}}}</div>
 	    {{/if}}
 		</div>
 		<div class="sub title field">
 		  {{> afFieldInput name="subtitle"}}
 		  {{#if afFieldIsInvalid name='subtitle'}}
-        <span class="negative alert">{{{afFieldMessage name='subtitle'}}}</span>
+        <div class="alert alert-info">{{{afFieldMessage name='subtitle'}}}</div>
       {{/if}}
 		</div>
 		<section class="ui hero vertical segment">
@@ -17,7 +17,13 @@
 				<div class="ui two column stackable page grid">
 					<div class="content column">
 						{{> afFieldInput name="heroTitle"}}
+						{{#if afFieldIsInvalid name='heroTitle'}}
+			        <div class="alert alert-info">{{{afFieldMessage name='heroTitle'}}}</div>
+			      {{/if}}
 						{{> afFieldInput name="heroContent"}}
+						{{#if afFieldIsInvalid name='heroContent'}}
+			        <div class="alert alert-info">{{{afFieldMessage name='heroContent'}}}</div>
+			      {{/if}}
 						<img class="ui small centered hero image" src="{{heroImage}}">
 					</div>
 				  <div class="form column">

@@ -1,35 +1,44 @@
 <template name="editor">
-	<div class="ui edit form">
-		<div class="title field">
-	    <input type="text" name="title" class="edit title" placeholder="Title" value="{{title}}" autofocus />
+	{{#autoForm collection='Contents' doc=this class='ui edit form' id='editContent' type='update' autosave=true validation='keyup'}}
+	  <div class="title field">
+			{{> afFieldInput name="title"}}
+			{{#if afFieldIsInvalid name='title'}}
+	      <div class="alert alert-info">{{{afFieldMessage name='title'}}}</div>
+	    {{/if}}
 		</div>
 		<div class="sub title field">
-	    <input type="text" name="subtitle" class="edit sub title" placeholder="Subtitle" value="{{subtitle}}"/>
+		  {{> afFieldInput name="subtitle"}}
+		  {{#if afFieldIsInvalid name='subtitle'}}
+        <div class="alert alert-info">{{{afFieldMessage name='subtitle'}}}</div>
+      {{/if}}
 		</div>
 		<section class="ui hero vertical segment">
 			{{#if newsletter}}
 				<div class="ui two column stackable page grid">
 					<div class="content column">
-						<input type="text" name="herotitle" class="edit hero title" placeholder="Hero Title" value="{{heroTitle}}" />
-						<textarea name="herocontent" class="edit hero content" placeholder="Hero content">{{heroContent}}</textarea>
+						{{> afFieldInput name="heroTitle"}}
+						{{#if afFieldIsInvalid name='heroTitle'}}
+			        <div class="alert alert-info">{{{afFieldMessage name='heroTitle'}}}</div>
+			      {{/if}}
+						{{> afFieldInput name="heroContent"}}
+						{{#if afFieldIsInvalid name='heroContent'}}
+			        <div class="alert alert-info">{{{afFieldMessage name='heroContent'}}}</div>
+			      {{/if}}
 						<img class="ui small centered hero image" src="{{heroImage}}">
 					</div>
-					<div class="form column">
-						{{> subscribe}}
-					</div>
-				</div>
+				  <div class="form column">
+				  	{{> subscribe}}
+				  </div>
+			  </div>
 		  {{else}}
-				<div class="ui stackable page grid">
-					<div class="content column">
-						<input type="text" name="herotitle" class="edit hero title" placeholder="Hero Title" value="{{heroTitle}}" />
-						<textarea name="herocontent" class="edit hero content" placeholder="Hero content">{{heroContent}}</textarea>
-						<img class="ui small centered hero image" src="{{heroImage}}">
+			  <div class="ui stackable page grid">
+				  <div class="content column">
 					</div>
 				</div>
 			{{/if}}
-	  </section>
-	  <div class="markdown field">
-		  <textarea name="edit" class="edit content" placeholder="Write some markdown">{{content}}</textarea>
+		</section>
+		<div class="markdown field">
+		  {{> afFieldInput name="content"}}
 		</div>
-	</div>
+	{{/autoForm}}
 </template>

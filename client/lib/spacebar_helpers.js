@@ -33,3 +33,8 @@ Template.registerHelper('newsletter', function() {
 Template.registerHelper('overlay', function() {
   return Session.get('overlay');
 });
+
+// Template.registerHelper('checkboxValue', function() {
+  // var checkboxValue = Meteor.subscribe(Contents.find({}, {newsletter: 1}));
+  // console.log(checkboxValue);
+// })

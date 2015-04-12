@@ -1,3 +1,3 @@
 Template.settings.rendered = function () {
-  $('.ui.toggle.checkbox').checkbox();
+  //$('.ui.toggle.checkbox .checkbox label').checkbox();
 };

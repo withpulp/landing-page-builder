@@ -87,8 +87,7 @@ Contents.attachSchema(new SimpleSchema({
 		label: 'Enable Newsletter',
 		autoform: {
       afFieldInput: {
-        class: 'newsletter toggle',
-				checked: true
+        class: 'newsletter toggle'
       }
     }
 	},

@@ -1,13 +1,13 @@
 <template name="editor">
 	{{#autoForm collection='Contents' doc=this class='ui edit form' id='editContent' type='update' autosave=autoSaveMode validation='keyup'}}
-    {{> afQuickField name="title" class="edit title" placeholder="Title"}}
-		{{> afQuickField name="subtitle" class="edit sub title" placeholder="Subtitle"}}
+    {{> afQuickField name="title"}}
+		{{> afQuickField name="subtitle"}}
 		<section class="ui hero vertical segment">
 			{{#if newsletter}}
 				<div class="ui two column stackable page grid">
 					<div class="content column">
-						{{> afQuickField name="heroTitle" class="edit hero title" placeholder="Hero Title"}}
-						{{> afQuickField name="heroContent" class="edit hero content" placeholder="Hero Content" rows=3}}
+						{{> afQuickField name="heroTitle"}}
+						{{> afQuickField name="heroContent"}}
 						<img class="ui small centered hero image" src="{{heroImage}}">
 					</div>
 				  <div class="form column">
@@ -21,7 +21,7 @@
 				</div>
 			{{/if}}
 		</section>
-		{{> afQuickField name="content" class="edit content" placeholder="Write some markdown" rows=20}}
+		{{> afQuickField name="content"}}
 	{{/autoForm}}
 	<!--
 	<div class="ui edit form">

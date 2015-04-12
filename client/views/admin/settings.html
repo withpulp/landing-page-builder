@@ -1,24 +1,23 @@
 <template name="settings">
-	<form class="ui fluid settings form">
+	{{#autoForm collection='Contents' doc=this class='ui fluid settings form' id='editSettings' type='update' autosave=true validation='keyup'}}
 	  <h2 class="ui dividing header">General</h2>
 	  <div class="field">
 	    <label>Hero Image URL</label>
-	    <input type="text" name="heroImage" class="hero image" placeholder="Enter full image url..." value="{{heroImage}}">
+			{{> afFieldInput name="heroImage"}}
 	  </div>
 		<h2 class="ui dividing header">Newsletter</h2>
 	  <div class="inline field">
 		  <div class="ui toggle checkbox">
-		    <input type="checkbox" name="newsletter" class="newsletter toggle" checked>
-		    <label>Enable Newsletter</label>
+				{{> afFieldInput name="newsletter"}}
 		  </div>
 		</div>
 	  <div class="field">
 		  <label>Mailchimp API Key</label>
-		  <input type="text" name="mailchimpAPI" class="newsletter api" placeholder="Enter Mailchimp API Key..." value="{{mailchimpAPI}}">
+			{{> afFieldInput name="mailchimpAPI"}}
 		</div>
 	  <div class="field">
-		  <label>Mailchimp List ID</label>
-		  <input type="text" name="mailchimpID" class="newsletter id" placeholder="Enter Mailchimp List ID..." value="{{mailchimpID}}">
+			<label>Mailchimp List ID</label>
+			{{> afFieldInput name="mailchimpID"}}
 		</div>
 		<h2 class="ui dividing header">Overlay</h2>
 		<div class="inline field">
@@ -48,5 +47,5 @@
 			  </div>
       </div>
 		</div>
-	</form>
+	{{/autoForm}}
 </template>

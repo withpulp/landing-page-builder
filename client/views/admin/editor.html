@@ -1,5 +1,5 @@
 <template name="editor">
-	{{#autoForm collection='Contents' doc=this class='ui edit form' id='editContent' type='update' autosave=autoSaveMode validation='keyup'}}
+	{{#autoForm collection='Contents' doc=this class='ui edit form' id='editContent' type='update' autosave=true validation='keyup'}}
 	  <div class="title field">
 			{{> afFieldInput name="title"}}
 			{{#if afFieldIsInvalid name='title'}}

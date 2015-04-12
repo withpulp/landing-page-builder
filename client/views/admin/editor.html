@@ -33,6 +33,15 @@
 		  {{else}}
 			  <div class="ui stackable page grid">
 				  <div class="content column">
+						{{> afFieldInput name="heroTitle"}}
+						{{#if afFieldIsInvalid name='heroTitle'}}
+			        <div class="alert alert-info">{{{afFieldMessage name='heroTitle'}}}</div>
+			      {{/if}}
+						{{> afFieldInput name="heroContent"}}
+						{{#if afFieldIsInvalid name='heroContent'}}
+			        <div class="alert alert-info">{{{afFieldMessage name='heroContent'}}}</div>
+			      {{/if}}
+						<img class="ui small centered hero image" src="{{heroImage}}">
 					</div>
 				</div>
 			{{/if}}

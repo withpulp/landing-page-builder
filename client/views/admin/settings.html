@@ -19,28 +19,9 @@
 		</div>
 		<h2 class="ui dividing header">Overlay</h2>
 		<div class="inline field">
-			{{> afFieldInput name="newsletter"}}
-			<div class="grouped fields">
-        <label for="alone">When would you like the overlay to trigger?</label>
-        <div class="field">
-          <div class="ui radio checkbox checked">
-            <input type="radio" checked="" name="import">
-            <label>When the page loads</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="ui radio checkbox">
-            <input type="radio" name="import">
-            <label>After 30 seconds</label>
-          </div>
-        </div>
-			  <div class="field">
-				  <div class="ui radio checkbox">
-					  <input type="radio" name="import">
-					  <label>After 60 seconds</label>
-				  </div>
-			  </div>
-      </div>
+			{{> afFieldInput name="overlay"}}
+			<label for="alone">When would you like the overlay to trigger?</label>
+			{{> afFieldInput name="overlayTimeout"}}
 		</div>
 	{{/autoForm}}
 </template>

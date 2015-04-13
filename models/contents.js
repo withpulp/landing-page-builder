@@ -124,4 +124,22 @@ Contents.attachSchema(new SimpleSchema({
       }
     }
 	},
+	overlayTimeout: {
+		type: String,
+		label: 'When would you like the overlay to trigger?',
+		optional: true,
+		autoform: {
+			afFieldInput: {
+				type: 'select-radio',
+				class: 'overlay timeout',
+        options: function () {
+          return [
+            { label: 'When the page loads', value: 0 },
+            { label: 'After 30 seconds', value: 1 },
+            { label: 'After 60 seconds', value: 2 }
+          ];
+        }
+			}
+		}
+	}
 }));

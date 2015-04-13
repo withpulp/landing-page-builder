@@ -28,7 +28,7 @@ Meteor.startup(function () {
       mailchimpAPI: 'xxxxxxxxxxxxxxxxxxxxxxx-xxx',
       mailchimpID: 'xxxxxxxxxx',
       overlay: false,
-      overlayTimeout: 0,
+      overlayTimeout: '0',
       created: now,
       updated: now,
       author: admin,

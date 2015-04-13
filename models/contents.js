@@ -85,6 +85,7 @@ Contents.attachSchema(new SimpleSchema({
 	newsletter: {
 		type: Boolean,
 		label: 'Enable Newsletter',
+		optional: true,
 		autoform: {
       afFieldInput: {
         class: 'newsletter toggle'
@@ -94,6 +95,7 @@ Contents.attachSchema(new SimpleSchema({
 	mailchimpAPI: {
 		type: String,
 		label: 'Mailchimp API Key',
+		optional: true,
 		autoform: {
       afFieldInput: {
         class: 'newsletter api',
@@ -104,11 +106,22 @@ Contents.attachSchema(new SimpleSchema({
 	mailchimpID: {
 		type: String,
 		label: 'Mailchimp ID',
+		optional: true,
 		autoform: {
       afFieldInput: {
         class: 'newsletter id',
 				placeholder: 'Enter Mailchimp List ID...'
       }
     }
-	}
+	},
+	overlay: {
+		type: Boolean,
+		label: 'Enable Overlay',
+		optional: true,
+		autoform: {
+      afFieldInput: {
+        class: 'overlay toggle'
+      }
+    }
+	},
 }));

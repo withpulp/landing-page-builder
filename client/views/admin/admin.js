@@ -7,11 +7,9 @@ Template.admin.rendered = function () {
     return x.newsletter;
   }), true);
 
-	if (newsletterValue) {
-		console.log(newsletterValue);
+	if (newsletterValue[0] === true) {
 		Session.set('newsletter', true);
 	} else {
-		console.log(newsletterValue);
 		Session.set('newsletter', false);
 	}
 };

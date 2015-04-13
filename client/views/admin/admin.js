@@ -7,7 +7,7 @@ Template.admin.rendered = function () {
     return x.newsletter;
   }), true);
 
-	if (newsletterValue === true) {
+	if (newsletterValue) {
 		console.log(newsletterValue);
 		Session.set('newsletter', true);
 	} else {

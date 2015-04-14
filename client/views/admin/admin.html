@@ -2,13 +2,14 @@
 	<div class="animated fadeIn admin">
 		{{#autoForm collection='Contents' doc=this class='ui admin form' id='editContent' type='update' validation='keyup'}}
 		  {{> editor}}
-			{{#if showSettings}}
-			  {{> settings}}
-			{{/if}}
+			{{> settings}}
 			<div class="ui admin actions">
 			  <button type="submit" class="ui primary save button">
 				  Save
 			  </button>
+				<button type="button" class="circular ui settings icon button">
+					<i class="icon settings"></i>
+				</button>
 			</div>
 		{{/autoForm}}
 	</div>

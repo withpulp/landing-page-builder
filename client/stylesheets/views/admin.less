@@ -91,18 +91,37 @@
         box-shadow: none;
       }
 
+      .ui.admin.settings {
+        position: fixed;
+        top: 2.5rem;
+        right: 0;
+        width: 35%;
+        height: 100%;
+        padding: 1rem;
+        background: fade(@mute-color, 85%);
+      }
+
       .ui.admin.actions {
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
-        margin: 0.25rem auto;
-        z-index: 20;
+        margin: 2rem auto;
 
-        .ui.save.button {
-          display: block;
-          margin: 0 auto;
-          padding: 1rem 3rem;
+        .ui.button {
+
+          &.save {
+            display: block;
+            margin: 0 auto;
+            padding: 1rem 3rem;
+          }
+
+          &.settings {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0.25rem 2rem;
+          }
         }
       }
     }

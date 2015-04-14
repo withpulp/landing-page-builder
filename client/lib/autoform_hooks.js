@@ -1,11 +1,20 @@
 AutoForm.hooks({
 	editContent: {
 		onSuccess: function(updateDoc, result) {
-			console.log(result);
-			// if newsletter === true
-			// set newsletter session to true
-			// else
-			// set newsletter session to false
+			var newsletterValue = _.uniq(Contents.find({}, {
+		    sort: {newsletter: 1}, fields: {newsletter: true}
+		  }).fetch().map(function(x) {
+		    return x.newsletter;
+		  }), true);
+
+			if (newsletterValue[0] === true) {
+				Session.set('newsletter', true);
+			} else {
+				Session.set('newsletter', false);
+		  }
+
+			Router.go('home');
+			FlashMessages.sendSuccess('Content updated');
 		}
   }
 });

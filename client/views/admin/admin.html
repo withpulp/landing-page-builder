@@ -1,10 +1,15 @@
 <template name="admin">
 	<div class="animated fadeIn admin">
-	  <div class="ui active animated fadeIn tab segment" data-tab="first">
-			{{> editor}}
-	  </div>
-	  <div class="ui animated fadeIn tab segment" data-tab="second">
-		  {{> settings}}
-	  </div>
+		{{#autoForm collection='Contents' doc=this class='ui admin form' id='editContent' type='update' validation='keyup'}}
+		  {{> editor}}
+			{{#if showSettings}}
+			  {{> settings}}
+			{{/if}}
+			<div class="ui admin actions">
+			  <button type="submit" class="ui massive primary save button">
+				  Save
+			  </button>
+			</div>
+		{{/autoForm}}
 	</div>
 </template>

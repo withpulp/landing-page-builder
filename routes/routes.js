@@ -25,8 +25,7 @@ Router.route('/admin', {
   },
   waitOn: function () {
     return [
-      Meteor.subscribe('contents', 'admin'),
-      Meteor.subscribe('newsletter', 'admin')
+      Meteor.subscribe('contents', 'admin')
     ]
   },
   action: function () {

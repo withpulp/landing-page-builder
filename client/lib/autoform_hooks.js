@@ -1,5 +1,5 @@
 AutoForm.hooks({
-	editSettings: {
+	editContent: {
     onSubmit: function (insertDoc, updateDoc, currentDoc) {
 			console.log(currentDoc);
 			// on form submit =>

@@ -26,6 +26,10 @@ Template.registerHelper('notAdmin', function() {
   return Session.get('notAdmin');
 });
 
+Template.registerHelper('showSettings', function() {
+  return Session.get('showSettings');
+});
+
 Template.registerHelper('newsletter', function() {
   return Session.get('newsletter');
 });
@@ -33,8 +37,3 @@ Template.registerHelper('newsletter', function() {
 Template.registerHelper('overlay', function() {
   return Session.get('overlay');
 });
-
-// Template.registerHelper('checkboxValue', function() {
-  // var checkboxValue = Meteor.subscribe(Contents.find({}, {newsletter: 1}));
-  // console.log(checkboxValue);
-// })

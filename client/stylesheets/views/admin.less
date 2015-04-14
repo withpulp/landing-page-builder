@@ -7,93 +7,102 @@
 
   .admin {
 
-    .ui.tab.segment {
-      padding: 0;
-      border: 0;
-      box-shadow: none;
+    .ui.admin.form {
 
-      .ui.form {
+  		.field {
 
-  			.field {
+        &.title {
+          margin: 0;
+          background: transparent;
 
-          &.title {
-            margin: 0;
-            background: transparent;
+          &.sub {
+            margin: 0 0 1em;
+          }
+
+          .title {
+            padding: 0;
+            border: 0;
+            box-shadow: none;
+            font-size: @font-size-x-large;
+            font-weight: bold;
+            text-align: center;
 
             &.sub {
-              margin: 0 0 1em;
+              color: fade(@dark, 50%);
+              font-size: @font-size-larger;
+              font-weight: normal;
             }
-
-            .title {
-              padding: 0;
-              border: 0;
-              box-shadow: none;
-              font-size: @font-size-x-large;
-              font-weight: bold;
-              text-align: center;
-
-              &.sub {
-                color: fade(@dark, 50%);
-                font-size: @font-size-larger;
-                font-weight: normal;
-              }
-            }
-          }
-
-          &.markdown {
-            margin: 2rem 0 1em;
           }
         }
 
-        .ui.hero.segment {
-          margin: 0 -1em;
-          padding: 1em;
+        &.markdown {
+          margin: 2rem 0 1em;
+        }
+      }
 
-          .content {
+      .ui.hero.segment {
+        margin: 0 -1em;
+        padding: 1em;
 
-            .hero.title {
-              padding: 0;
-              margin-bottom: 1rem;
-              border: 0;
-              background: transparent;
-              box-shadow: none;
-              font-size: @font-size-large;
-              font-weight: bold;
-              text-align: center;
-            }
+        .content {
 
-            .hero.content {
-              height: 5em;
-              text-align: center;
-            }
-
-            .hero.image {
-              margin-right: auto;
-              margin-left: auto;
-            }
+          .hero.title {
+            padding: 0;
+            margin-bottom: 1rem;
+            border: 0;
+            background: transparent;
+            box-shadow: none;
+            font-size: @font-size-large;
+            font-weight: bold;
+            text-align: center;
           }
 
-          @media (min-width: @medium-desktop-width) {
-            margin: 0 -12%;
+          .hero.content {
+            height: 5em;
+            text-align: center;
           }
 
-          @media (min-width: @large-desktop-width) {
-            margin: 0 -24%;
+          .hero.image {
+            margin-right: auto;
+            margin-left: auto;
           }
         }
 
-        textarea.content {
-          min-height: 5em;
-          max-height: 100vh;
-          padding: 0;
-          overflow-x: hidden;
-          vertical-align: baseline;
-          -webkit-appearance: inherit;
-          resize: none;
-          border: 0;
-          background: transparent;
-          -webkit-box-shadow: none;
-          box-shadow: none;
+        @media (min-width: @medium-desktop-width) {
+          margin: 0 -12%;
+        }
+
+        @media (min-width: @large-desktop-width) {
+          margin: 0 -24%;
+        }
+      }
+
+      textarea.content {
+        min-height: 5em;
+        max-height: 100vh;
+        padding: 0;
+        overflow-x: hidden;
+        vertical-align: baseline;
+        -webkit-appearance: inherit;
+        resize: none;
+        border: 0;
+        background: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+
+      .ui.admin.actions {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0.25rem auto;
+        z-index: 20;
+
+        .ui.save.button {
+          display: block;
+          margin: 0 auto;
+          padding: 1rem 3rem;
         }
       }
     }

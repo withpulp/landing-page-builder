@@ -1,53 +1,51 @@
 <template name="editor">
-	{{#autoForm collection='Contents' doc=this class='ui edit form' id='editContent' type='update' autosave=true validation='keyup'}}
-	  <div class="title field">
-			{{> afFieldInput name="title"}}
-			{{#if afFieldIsInvalid name='title'}}
-	      <div class="alert alert-info">{{{afFieldMessage name='title'}}}</div>
-	    {{/if}}
-		</div>
-		<div class="sub title field">
-		  {{> afFieldInput name="subtitle"}}
-		  {{#if afFieldIsInvalid name='subtitle'}}
-        <div class="alert alert-info">{{{afFieldMessage name='subtitle'}}}</div>
-      {{/if}}
-		</div>
-		<section class="ui hero vertical segment">
-			{{#if newsletter}}
-				<div class="ui two column stackable page grid">
-					<div class="content column">
-						{{> afFieldInput name="heroTitle"}}
-						{{#if afFieldIsInvalid name='heroTitle'}}
-			        <div class="alert alert-info">{{{afFieldMessage name='heroTitle'}}}</div>
-			      {{/if}}
-						{{> afFieldInput name="heroContent"}}
-						{{#if afFieldIsInvalid name='heroContent'}}
-			        <div class="alert alert-info">{{{afFieldMessage name='heroContent'}}}</div>
-			      {{/if}}
-						<img class="ui small centered hero image" src="{{heroImage}}">
-					</div>
-				  <div class="form column">
-				  	{{> subscribe}}
-				  </div>
-			  </div>
-		  {{else}}
-			  <div class="ui stackable page grid">
-				  <div class="content column">
-						{{> afFieldInput name="heroTitle"}}
-						{{#if afFieldIsInvalid name='heroTitle'}}
-			        <div class="alert alert-info">{{{afFieldMessage name='heroTitle'}}}</div>
-			      {{/if}}
-						{{> afFieldInput name="heroContent"}}
-						{{#if afFieldIsInvalid name='heroContent'}}
-			        <div class="alert alert-info">{{{afFieldMessage name='heroContent'}}}</div>
-			      {{/if}}
-						<img class="ui small centered hero image" src="{{heroImage}}">
-					</div>
+	<div class="title field">
+		{{> afFieldInput name="title"}}
+		{{#if afFieldIsInvalid name='title'}}
+	    <div class="alert alert-info">{{{afFieldMessage name='title'}}}</div>
+	  {{/if}}
+	</div>
+	<div class="sub title field">
+		{{> afFieldInput name="subtitle"}}
+		{{#if afFieldIsInvalid name='subtitle'}}
+      <div class="alert alert-info">{{{afFieldMessage name='subtitle'}}}</div>
+    {{/if}}
+	</div>
+	<section class="ui hero vertical segment">
+		{{#if newsletter}}
+			<div class="ui two column stackable page grid">
+				<div class="content column">
+					{{> afFieldInput name="heroTitle"}}
+					{{#if afFieldIsInvalid name='heroTitle'}}
+			      <div class="alert alert-info">{{{afFieldMessage name='heroTitle'}}}</div>
+			    {{/if}}
+					{{> afFieldInput name="heroContent"}}
+					{{#if afFieldIsInvalid name='heroContent'}}
+			      <div class="alert alert-info">{{{afFieldMessage name='heroContent'}}}</div>
+			    {{/if}}
+					<img class="ui small centered hero image" src="{{heroImage}}">
 				</div>
-			{{/if}}
-		</section>
-		<div class="markdown field">
-		  {{> afFieldInput name="content"}}
-		</div>
-	{{/autoForm}}
+				<div class="form column">
+				  {{> subscribe}}
+				</div>
+			</div>
+		{{else}}
+		  <div class="ui stackable page grid">
+				<div class="content column">
+				  {{> afFieldInput name="heroTitle"}}
+				  {{#if afFieldIsInvalid name='heroTitle'}}
+			      <div class="alert alert-info">{{{afFieldMessage name='heroTitle'}}}</div>
+			    {{/if}}
+					{{> afFieldInput name="heroContent"}}
+					{{#if afFieldIsInvalid name='heroContent'}}
+			      <div class="alert alert-info">{{{afFieldMessage name='heroContent'}}}</div>
+			    {{/if}}
+					<img class="ui small centered hero image" src="{{heroImage}}">
+				</div>
+			</div>
+		{{/if}}
+	</section>
+	<div class="markdown field">
+		{{> afFieldInput name="content"}}
+	</div>
 </template>

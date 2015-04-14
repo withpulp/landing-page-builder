@@ -10,18 +10,13 @@
 		  </div>
 		</div>
 		<div class="center item">
-			{{#if notAdmin}}
-			  Landing Page Builder
-			{{else}}
-			  {{> tabsMenu}}
-			{{/if}}
+			<a class="logo" href="{{pathFor 'home'}}">Landing Page Builder</a>
 		</div>
 		<div class="right item">
 			{{#if notAdmin}}
-		  	<a class="ui basic orange button {{isActiveRoute regex='admin'}}" href="{{pathFor 'admin'}}">Edit</a>
+		  	<a class="ui basic orange button" href="{{pathFor 'admin'}}">Edit</a>
 			{{else}}
-			  <a class="ui basic red button {{isActiveRoute regex='home'}}" href="{{pathFor 'home'}}">Cancel</a>
-			  <a class="ui basic green save button">Save</a>
+			  <a class="ui basic red button" href="{{pathFor 'home'}}">Cancel</a>
 			{{/if}}
 		</div>
 	</nav>

@@ -145,6 +145,13 @@
             right: 0;
             bottom: 0;
             margin: 0.25rem;
+            background: fade(@mute-color, 75%);
+            color: @text-color;
+
+            &:hover,
+            &:focus {
+              background: @mute-color;
+            }
           }
         }
       }

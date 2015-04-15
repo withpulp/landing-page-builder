@@ -19,9 +19,11 @@
         {{> yield}}
       </div>
     </section>
-    <footer class="footer">
-      {{> footer}}
-    </footer>
+    {{#if notAdmin}}
+      <footer class="footer">
+        {{> footer}}
+      </footer>
+    {{/if}}
   </main>
   {{#if overlay}}
     {{> modal}}

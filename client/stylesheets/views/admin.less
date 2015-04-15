@@ -99,28 +99,50 @@
         height: 100%;
         padding: 1rem;
         background: fade(@mute-color, 85%);
-      }
+        -moz-transition: all @faster;
+        -webkit-transition: all @faster;
+        transition: all @faster;
 
+        &.off {
+          -moz-transform: translate3d(100%, 0, 0);
+          -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+        }
+
+        &.on {
+          -moz-transform: translate3d(0, 0, 0);
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+      }
       .ui.admin.actions {
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
-        margin: 2rem auto;
 
         .ui.button {
+          margin: 0;
 
           &.save {
-            display: block;
-            margin: 0 auto;
-            padding: 1rem 3rem;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin: 0.25rem;
+            background: fade(@primary-color, 75%);
+            color: @light;
+
+            &:hover,
+            &:focus {
+              background: @primary-color;
+            }
           }
 
           &.settings {
             position: absolute;
-            top: 0;
             right: 0;
-            margin: 0.25rem 2rem;
+            bottom: 0;
+            margin: 0.25rem;
           }
         }
       }

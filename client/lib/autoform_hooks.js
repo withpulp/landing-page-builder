@@ -34,6 +34,23 @@ AutoForm.hooks({
 
 				Router.go('home');
 				FlashMessages.sendSuccess('Content updated');
+			},
+			onSuccess: function(updateDoc, result) {
+				var overlayTimeoutValue = _.uniq(Contents.find({}, {
+					sort: {overlayTimeout: 1}, fields: {overlayTimeout: true}
+				}).fetch().map(function(x) {
+					return x.overlayTimeout;
+					}), true);
+					console.log(overlayTimeoutValue);
+
+				if (overlayTimeoutValue[0] === true) {
+						// Session.set('overlay', true);
+					} else {
+						// Session.set('overlay', false);
+					}
+
+				Router.go('home');
+				FlashMessages.sendSuccess('Content updated');
 			}
 		}
   });

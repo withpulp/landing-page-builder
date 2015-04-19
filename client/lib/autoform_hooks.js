@@ -47,7 +47,7 @@ AutoForm.hooks({
 						Session.set('overlay', true);
 					} else if (overlayTimeoutValue[0] = 1) {
 						Session.set('overlay', true);
-					} else if (overlayTimeoutValue[0] =cd 2) {
+					} else if (overlayTimeoutValue[0] = 2) {
 						Session.set('overlay', true);
 					} else {
 					 	Session.set('overlay', false);

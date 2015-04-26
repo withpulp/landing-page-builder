@@ -130,15 +130,8 @@ Contents.attachSchema(new SimpleSchema({
 		optional: true,
 		autoform: {
 			afFieldInput: {
-				type: 'select-radio',
 				class: 'overlay timeout',
-        options: function () {
-          return [
-            { label: 'When the page loads', value: 0 },
-            { label: 'After 30 seconds', value: 1 },
-            { label: 'After 60 seconds', value: 2 }
-          ];
-        }
+				placeholder: 'Enter time in seconds...'
 			}
 		}
 	}

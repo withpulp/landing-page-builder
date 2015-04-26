@@ -17,7 +17,7 @@ AutoForm.hooks({
 			Router.go('home');
 			FlashMessages.sendSuccess('Content updated');
 		},
-			/*onSuccess: function(updateDoc, result) {
+			onSuccess: function(updateDoc, result) {
 				var overlayValue = _.uniq(Contents.find({}, {
 					sort: {overlay: 1}, fields: {overlay: true}
 				}).fetch().map(function(x) {
@@ -26,32 +26,10 @@ AutoForm.hooks({
 					console.log(overlayValue);
 
 
-				if (overlayValue[0] === true) {
+				if (overlayValue != 0 ) {
 						Session.set('overlay', true);
 					} else {
 						Session.set('overlay', false);
-					}
-
-				Router.go('home');
-				FlashMessages.sendSuccess('Content updated');
-			},*/
-
-			onSuccess: function(updateDoc, result) {
-				var overlayTimeoutValue = _.uniq(Contents.find({}, {
-					sort: {overlayTimeout: 1}, fields: {overlayTimeout: true}
-				}).fetch().map(function(x) {
-					return x.overlayTimeout;
-					}), true);
-					console.log(overlayTimeoutValue);
-
-				if (overlayTimeoutValue = 0) {
-						Session.set('overlay', true);
-					} else if (overlayTimeoutValue = 1) {
-						Session.set('overlayThirty', true);
-					} else if (overlayTimeoutValue = 2) {
-						Session.set('overlaySixty', true);
-					} else {
-					 	Session.set('overlay', false);
 					}
 
 				Router.go('home');

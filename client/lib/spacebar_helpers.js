@@ -35,22 +35,5 @@ Template.registerHelper('newsletter', function() {
 });
 
 Template.registerHelper('overlay', function() {
-  var overlayTimeoutValue = _.uniq(Contents.find({}, {
-    sort: {overlayTimeout: 1}, fields: {overlayTimeout: true}
-  }).fetch().map(function(x) {
-    return x.overlayTimeout;
-    }), true);
-    console.log(overlayTimeoutValue);
-
-  if (overlayTimeoutValue === 0) {
-    return Session.get('overlay')
-  }
-
-  else if (overlayTimeoutValue === 1) {
-    return Session.get('overlayThirty')
-  }
-
-  else if (overlayTimeoutValue === 2) {
-    return Session.get('overlaySixty')
-  }
+  return Session.get('overlay');
 });

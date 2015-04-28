@@ -18,15 +18,14 @@ AutoForm.hooks({
 			FlashMessages.sendSuccess('Content updated');
 		},
 			onSuccess: function(updateDoc, result) {
-				var overlayValue = _.uniq(Contents.find({}, {
-					sort: {overlay: 1}, fields: {overlay: true}
-				}).fetch().map(function(x) {
-					return x.overlay;
-					}), true);
-					console.log(overlayValue);
+				var time = _.uniq(Contents.find({}, {
+			    sort: {overlayTimeout: 1}, fields: {overlayTimeout: true}
+			  }).fetch().map(function(x) {
+			    return x.overlayTimeout;
+			    }), true);
+			    console.log(time);
 
-
-				if (overlayValue != 0 ) {
+				if (time !== null ) {
 						Session.set('overlay', true);
 					} else {
 						Session.set('overlay', false);

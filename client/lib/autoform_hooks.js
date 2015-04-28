@@ -14,25 +14,20 @@ AutoForm.hooks({
 				Session.set('newsletter', false);
 		  }
 
+			var time = _.uniq(Contents.find({}, {
+				sort: {overlayTimeout: 1}, fields: {overlayTimeout: true}
+			}).fetch().map(function(x) {
+				return x.overlayTimeout;
+				}), true);
+				console.log(time);
+
+			if (time !== null ) {
+				Session.set('overlay', true);
+			} else {
+				Session.set('overlay', false);
+			}
+
 			Router.go('home');
 			FlashMessages.sendSuccess('Content updated');
-		},
-			onSuccess: function(updateDoc, result) {
-				var time = _.uniq(Contents.find({}, {
-			    sort: {overlayTimeout: 1}, fields: {overlayTimeout: true}
-			  }).fetch().map(function(x) {
-			    return x.overlayTimeout;
-			    }), true);
-			    console.log(time);
-
-				if (time !== null ) {
-						Session.set('overlay', true);
-					} else {
-						Session.set('overlay', false);
-					}
-
-				Router.go('home');
-				FlashMessages.sendSuccess('Content updated');
-			}
 		}
   });

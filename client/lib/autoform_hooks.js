@@ -30,4 +30,5 @@ AutoForm.hooks({
 			Router.go('home');
 			FlashMessages.sendSuccess('Content updated');
 		}
-  });
+  }
+});

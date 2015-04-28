@@ -9,4 +9,6 @@ Template.modal.rendered = function() {
 
     $('.ui.modal').modal('show');
   }, time);
+
+  //TODO Address referenceError on time
 };

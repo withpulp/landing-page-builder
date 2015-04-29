@@ -18,13 +18,16 @@ AutoForm.hooks({
 				sort: {overlayTimeout: 1}, fields: {overlayTimeout: true}
 			}).fetch().map(function(x) {
 				return x.overlayTimeout;
-				}), true);
-				console.log(time);
+			}), true);
+
+			//console.log(time);
 
 			if (time !== null ) {
 				Session.set('overlay', true);
+				console.log('overlay true - timeout is ' + time);
 			} else {
 				Session.set('overlay', false);
+				console.log('overlay false - timeout is ' + time);
 			}
 
 			Router.go('home');

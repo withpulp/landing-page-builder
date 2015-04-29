@@ -1,3 +1,3 @@
 Template.layout.rendered = function () {
- Session.set('overlay', false);
+  //Session.set('overlay', false);
 };

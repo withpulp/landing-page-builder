@@ -5,11 +5,9 @@ Template.modal.rendered = function() {
     return x.overlayTimeout;
   }), true);
 
-  console.log(time);
+  //console.log(time);
 
   setTimeout(function() {
     $('.ui.modal').modal('show');
   }, time);
-
-  //TODO Address referenceError on time
 };

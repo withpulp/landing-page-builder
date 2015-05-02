@@ -5,13 +5,17 @@
 
 .ui.button {
 
-	&.primary {
-		background: @primary-color;
+	&.basic {
+		background: @primary-color !important;
+		font-weight: bold;
+		box-shadow: 0px 1px 0px 2px rgb(211, 211, 211);
+		width: 100px;
 
-    &:hover,
-		&:focus {
-			background: @secondary-color;
-		}
+		 &:hover,
+		 &:focus {
+				background: @secondary-color !important;
+				box-shadow: 0px 1px 0px 2px rgb(211, 211, 211) !important;
+				}
 	}
 
   &.submit {

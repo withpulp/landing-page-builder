@@ -134,5 +134,27 @@ Contents.attachSchema(new SimpleSchema({
 				placeholder: 'Enter time in seconds...'
 			}
 		}
+	},
+	overlayTitle: {
+		type: String,
+		label: 'Overlay Title',
+		optional: true,
+		autoform: {
+			afFieldInput: {
+				class: 'overlay title',
+				placeholder: 'Overlay Title..'
+			}
+		}
+	},
+	overlayContent: {
+		type: String,
+		label: 'Overlay Content',
+		optional: true,
+		autoform: {
+			afFieldInput: {
+				class: 'overlay content',
+				placeholder: 'Overlay Content..'
+			}
+		}
 	}
 }));

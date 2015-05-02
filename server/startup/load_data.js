@@ -29,6 +29,8 @@ Meteor.startup(function () {
       mailchimpID: 'xxxxxxxxxx',
       overlay: false,
       overlayTimeout: '0',
+      overlayTitle: 'I\'m an overlay',
+      overlayContent: 'I\'m the overlay content',
       created: now,
       updated: now,
       author: admin,

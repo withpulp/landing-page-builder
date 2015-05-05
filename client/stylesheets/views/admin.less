@@ -98,11 +98,11 @@
         width: 45%;
         height: 100%;
         padding: 1rem;
-        background: rgba(213, 235, 255, 0.9);
+        background: fade(@aside-color, 90%);
         -moz-transition: all @faster;
         -webkit-transition: all @faster;
         transition: all @faster;
-        box-shadow: 0px 0px 3px 1px rgb(117, 116, 116);
+        box-shadow: 0 0 0.25rem 0.15rem fade(@gray-light, 90%);
 
         &.off {
           opacity: 0;

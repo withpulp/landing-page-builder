@@ -1,9 +1,9 @@
-Template.settings.rendered = function () {
-  tpl.$('input[name="overlay"]').on('click', function () {
-     if ($(this).prop('checked')) {
-         $('.overlay-settings').fadeIn();
-     } else {
-         $('.overlay-settings').hide();
-     }
-});
-};
+Template.settings.rendered = function() {
+  $('#overlay').change(function(){
+      if(this.checked) {
+        $('.overlay-settings').fadeIn('fast');
+      } else {
+      $('.overlay-settings').fadeOut('fast');
+      }
+  });
+}

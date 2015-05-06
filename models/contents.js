@@ -120,7 +120,8 @@ Contents.attachSchema(new SimpleSchema({
 		optional: true,
 		autoform: {
       afFieldInput: {
-        class: 'overlay toggle'
+        class: 'overlay toggle',
+				id: 'overlay'
       }
     }
 	},

@@ -1,9 +1,7 @@
-Template.settings.rendered = function() {
-  $('#overlay').change(function(){
-      if(this.checked) {
-        $('.overlay-settings').fadeIn('fast');
-      } else {
-      $('.overlay-settings').fadeOut('fast');
-      }
-  });
-}
+Template.settings.events({
+  "click input.overlay": function(){
+    console.log("yay");
+    Session.set('newsletterChecked', !Session.get('newsletterChecked'));
+    Session.get('newsletterChecked')
+  }
+});

@@ -21,6 +21,8 @@
 		<div class="field">
 			{{> afFieldInput name="overlay"}}
 		</div>
+
+		{{#if newsletterChecked}}
 		<section class="overlay-settings">
 			<div class="field">
 				<label for="alone">When would you like the overlay to trigger?</label>
@@ -35,5 +37,6 @@
 				{{> afFieldInput name="overlayContent"}}
 			</div>
 		</section>
+		{{/if}}
 	</aside>
 </template>

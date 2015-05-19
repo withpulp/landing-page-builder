@@ -34,6 +34,10 @@ Template.registerHelper('newsletter', function() {
   return Session.get('newsletter');
 });
 
+Template.registerHelper('newsletterChecked', function() {
+  return Session.get('newsletterChecked');
+});
+
 Template.registerHelper('overlay', function() {
   return Session.get('overlay');
 });

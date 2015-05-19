@@ -125,8 +125,8 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        background: @primary-color;
-        padding: 8px 10px;
+        background: @light;
+        padding: 0.25rem;
 
         .ui.button {
           margin: 0;
@@ -136,14 +136,14 @@
             left: 0;
             bottom: 0;
             margin: 0.25rem;
-            background: rgba(82, 143, 250, 0.75);
-            box-shadow: 1px 1px 1px 2px rgba(20, 83, 194, 0.75);
+            background: fade(@primary-color, 75%);
+            box-shadow: 0 1px 1px 2px darken(@primary-color, 5%);
             color: @light;
             width: 20%;
 
             &:hover,
             &:focus {
-              background: rgba(20, 83, 194, 0.75);
+              background: darken(@primary-color, 5%);
             }
           }
 

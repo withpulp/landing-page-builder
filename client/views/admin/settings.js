@@ -1,7 +1,17 @@
+Template.settings.rendered = function () {
+  if ($('.overlay.toggle').is(':checked')) {
+    Session.set('overlayChecked', true);
+  } else {
+    Session.set('overlayChecked', false);
+  }
+};
+
 Template.settings.events({
-  "click input.overlay": function(){
-    console.log("yay");
-    Session.set('newsletterChecked', !Session.get('newsletterChecked'));
-    Session.get('newsletterChecked')
+  'change .overlay.toggle': function() {
+    if ($('.overlay.toggle').is(':checked')) {
+      Session.set('overlayChecked', true);
+    } else {
+      Session.set('overlayChecked', false);
+    }
   }
 });

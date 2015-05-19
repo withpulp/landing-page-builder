@@ -7,15 +7,17 @@
 
 	&.basic {
 		width: 6rem;
-		background: @light !important;
-		-moz-box-shadow: 0px 1px 0px 2px lighten(@gray-light, 35%);
-		-webkit-box-shadow: 0px 1px 0px 2px lighten(@gray-light, 35%);
-		box-shadow: 0px 1px 0px 2px lighten(@gray-light, 35%);
-		font-weight: bold;
+		color: #555 !important;
+		border-bottom: 4px solid #b2b1b1;
+		text-shadow: 0px 1px 0px #fafafa !important;
+		background: #eee !important;
+		background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#e2e2e2));
+		background: -moz-linear-gradient(top, #eee, #e2e2e2);
+		box-shadow: inset 1px 1px 0 #f5f5f5;
 
 		&:hover,
 		&:focus {
-			background: @secondary-color !important;
+			background: -webkit-gradient(linear, left top, left bottom, from(#e2e2e2), to(#eee)) !important;
 		}
 	}
 

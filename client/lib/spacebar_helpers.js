@@ -37,3 +37,7 @@ Template.registerHelper('newsletter', function() {
 Template.registerHelper('overlay', function() {
   return Session.get('overlay');
 });
+
+Template.registerHelper('overlayChecked', function() {
+  return Session.get('overlayChecked');
+});

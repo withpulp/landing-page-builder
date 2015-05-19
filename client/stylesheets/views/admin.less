@@ -136,14 +136,16 @@
             left: 0;
             bottom: 0;
             margin: 0.25rem;
-            background: fade(@primary-color, 75%);
-            box-shadow: 0 1px 1px 2px darken(@primary-color, 5%);
-            color: @light;
+            background: -webkit-gradient(linear, left top, left bottom, from(#abe4f8), to(#74d0f4));
+            border-bottom: 4px solid #589cb6;
+            box-shadow: inset 1px 1px 0 #b2e6f8;
+            color: #42788e;
+            text-shadow: 0px 1px 0px #bee9fa;
             width: 20%;
 
             &:hover,
             &:focus {
-              background: darken(@primary-color, 5%);
+              background: -webkit-gradient(linear, left top, left bottom, from(#74d0f4), to(#abe4f8));
             }
           }
 
@@ -152,12 +154,17 @@
             right: 0;
             bottom: 0;
             margin: 0.25rem;
-            background: fade(@mute-color, 75%);
-            color: @text-color;
+            color: #555;
+            border-bottom: 4px solid #b2b1b1;
+            text-shadow: 0px 1px 0px #fafafa;
+            background: #eee;
+            background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#e2e2e2));
+            background: -moz-linear-gradient(top, #eee, #e2e2e2);
+            box-shadow: inset 1px 1px 0 #f5f5f5;
 
             &:hover,
             &:focus {
-              background: @mute-color;
+              background: -webkit-gradient(linear, left top, left bottom, from(#e2e2e2), to(#eee));
             }
           }
         }

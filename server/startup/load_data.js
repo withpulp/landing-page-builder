@@ -25,6 +25,7 @@ Meteor.startup(function () {
       heroImage: 'http://placekitten.com/220/300',
       content: '##The story begins!\n\nHe lived, he scratched up my furniture. He ate for free and always hated when I tried to pet him. Scratched me a bunch of times. Then he grew old and died. He was the best cat ever. The end.',
       newsletter: true,
+      newsletterHeader: 'Subscribe',
       mailchimpAPI: 'xxxxxxxxxxxxxxxxxxxxxxx-xxx',
       mailchimpID: 'xxxxxxxxxx',
       overlay: false,

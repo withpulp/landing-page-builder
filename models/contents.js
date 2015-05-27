@@ -92,6 +92,16 @@ Contents.attachSchema(new SimpleSchema({
       }
     }
 	},
+	newsletterHeader: {
+		type: String,
+		label: 'Subscription Form Header',
+		optional: true,
+		autoform: {
+			afFieldInput: {
+				class: 'newsletter header'
+			}
+		}
+	},
 	mailchimpAPI: {
 		type: String,
 		label: 'Mailchimp API Key',

@@ -84,6 +84,7 @@ BrowserPolicy.content.allowOriginForAll(YOUR_URL);
 
 * Meteor Core
   * [meteor-platform](https://github.com/meteor/meteor/tree/devel/packages/meteor-platform)
+  * [reactive-var](https://github.com/meteor/meteor/tree/devel/packages/reactive-var)
 * Routing
   * [iron:router](https://github.com/EventedMind/iron-router)
   * [zimme:iron-router-active](https://github.com/zimme/meteor-iron-router-active)

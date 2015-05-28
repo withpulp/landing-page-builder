@@ -1,5 +1,5 @@
 <template name="subscribe">
-  <form class="ui form segment" action="http://damir.us11.list-manage.com/subscribe/post" method="POST">
+  <form class="ui subscribe form segment">
     <h2 class="ui dividing header">{{newsletterHeader}}</h2>
     <div class="hidden fields">
       <input type="hidden" name="mailchimpUsername" value="{{mailchimpUsername}}">
@@ -15,6 +15,6 @@
       <label>Email</label>
       <input type="email" name="email" placeholder="Email">
     </div>
-    <div class="ui submit button">Submit</div>
+    <button type="submit" class="ui submit button">Submit</button>
   </form>
 </template>

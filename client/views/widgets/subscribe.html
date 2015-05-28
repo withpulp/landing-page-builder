@@ -2,8 +2,10 @@
   <form class="ui form segment" action="http://damir.us11.list-manage.com/subscribe/post" method="POST">
     <h2 class="ui dividing header">{{newsletterHeader}}</h2>
     <div class="hidden fields">
-      <input type="hidden" name="u" value="{{mailchimpAPI}}">
-      <input type="hidden" name="id" value="{{mailchimpID}}">
+      <input type="hidden" name="mailchimpUsername" value="{{mailchimpUsername}}">
+      <input type="hidden" name="mailchimpDC" value="{{mailchimpDC}}">
+      <input type="hidden" name="mailchimpAPI" value="{{mailchimpAPI}}">
+      <input type="hidden" name="mailchimpID" value="{{mailchimpID}}">
     </div>
     <div class="field">
       <label>Full Name</label>

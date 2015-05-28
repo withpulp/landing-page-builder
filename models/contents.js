@@ -98,9 +98,32 @@ Contents.attachSchema(new SimpleSchema({
 		optional: true,
 		autoform: {
 			afFieldInput: {
-				class: 'newsletter header'
+				class: 'newsletter header',
+				placeholder: 'Enter Newsletter Header...'
 			}
 		}
+	},
+	mailchimpUsername: {
+		type: String,
+		label: 'Mailchimp Username',
+		optional: true,
+		autoform: {
+      afFieldInput: {
+        class: 'newsletter username',
+				placeholder: 'Enter Mailchimp Username...'
+      }
+    }
+	},
+	mailchimpDC: {
+		type: String,
+		label: 'Mailchimp DC',
+		optional: true,
+		autoform: {
+      afFieldInput: {
+        class: 'newsletter dc',
+				placeholder: 'Enter Mailchimp DC...'
+      }
+    }
 	},
 	mailchimpAPI: {
 		type: String,

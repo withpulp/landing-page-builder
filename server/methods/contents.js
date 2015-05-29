@@ -4,6 +4,9 @@ Meteor.methods({
 		// get input values from subscribe form
 		// send data to mailchimp
 
+    // allow other methods on the same connection to run in the mean time
+    this.unblock();
+
     // check if name was entered
     if (!attributes.name) {
       throw new Meteor.Error('no-name-input', 'Please enter your full name');
@@ -19,25 +22,13 @@ Meteor.methods({
       id: '9a5ebe0d08'
     });
 
-    var submit = $.ajax({
-      type: 'POST',
-      url: '//damir.us11.list-manage.com/subscribe/post-json',
-      data: formData,
-      cache: false,
-      dataType: 'json',
-      contentType: 'application/json; charset=utf-8',
-      error: function(err) {
-        console.log('Could not connect to the registration server. Please try again later.');
-      },
-      success: function(data) {
-        if (data.result != 'success') {
-          console.log(data.msg);
-        } else {
-          console.log(data.msg);
-        }
-      }
-    });
-
-    return submit;
+    try {
+      var result = HTTP.call("//damir.us11.list-manage.com/subscribe/post-json",
+        {data: formData});
+      return true;
+    } catch (e) {
+      // Got a network error, time-out or HTTP error in the 400 or 500 range.
+      return false;
+    }
   }
 });

@@ -32,26 +32,5 @@ Template['subscribe'].events({
 				console.log('method called ' + params);
 			}
 		});
-
-    /*
-    $.ajax({
-      type: 'POST',
-      url: url,
-      data: params,
-      cache: false,
-      dataType: 'json',
-      contentType: 'application/json; charset=utf-8',
-      error: function(err) {
-        console.log('Could not connect to the registration server. Please try again later.');
-      },
-      success: function(data) {
-        if (data.result != 'success') {
-          console.log(data.msg);
-        } else {
-          console.log(data.msg);
-        }
-      }
-    });
-    */
 	}
 });

@@ -23,8 +23,8 @@ Meteor.methods({
     });
 
     try {
-      var result = HTTP.call("//damir.us11.list-manage.com/subscribe/post-json",
-        {data: formData});
+      var result = HTTP.call('POST', '//damir.us11.list-manage.com/subscribe/post-json',
+                     {data: formData});
       return true;
     } catch (e) {
       // Got a network error, time-out or HTTP error in the 400 or 500 range

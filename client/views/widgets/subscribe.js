@@ -19,6 +19,15 @@ Template['subscribe'].events({
     console.log(params);
     console.log(url);
 
+    Meteor.call('submitSubscription', params, function(error) {
+			if (error) {
+				console.log(error.reason);
+			} else {
+				console.log('method called ' + params);
+			}
+		});
+
+    /*
     $.ajax({
       type: 'POST',
       url: url,
@@ -37,5 +46,6 @@ Template['subscribe'].events({
         }
       }
     });
+    */
 	}
 });

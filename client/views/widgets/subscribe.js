@@ -18,8 +18,8 @@ Template['subscribe'].events({
         };*/
 
     var params = {
-          name: tpl.$('input[name=name]').val(),
-          email: tpl.$('input[name=email]').val()
+          FNAME: tpl.$('input[name=name]').val(),
+          EMAIL: tpl.$('input[name=email]').val()
         };
 
     console.log(params);

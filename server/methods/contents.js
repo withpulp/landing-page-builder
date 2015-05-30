@@ -8,11 +8,11 @@ Meteor.methods({
     this.unblock();
 
     // check if name was entered
-    if (!attributes.name) {
+    if (!attributes.FNAME) {
       throw new Meteor.Error('no-name-input', 'Please enter your full name');
     }
     // check if email was entered
-    if (!attributes.email) {
+    if (!attributes.EMAIL) {
       throw new Meteor.Error('no-email-input', 'Please enter your email');
     }
 
@@ -33,5 +33,27 @@ Meteor.methods({
     }
 
     return result;
+  },
+  saveSubscription: function(attributes) {
+
+    var now = new Date();
+
+    // check if name was entered
+    if (!attributes.FNAME) {
+      throw new Meteor.Error('no-name-input', 'Please enter your full name');
+    }
+    // check if email was entered
+    if (!attributes.EMAIL) {
+      throw new Meteor.Error('no-email-input', 'Please enter your email');
+    }
+
+    // pick out the whitelisted keys
+    var newSubscription = _.extend(_.pick(attributes, 'name', 'email'), {
+      created: now
+    });
+
+    var subscription = Subscriptions.insert(newSubscription);
+
+    return subscription;
   }
 });

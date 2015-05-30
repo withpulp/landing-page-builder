@@ -27,10 +27,18 @@ Template['subscribe'].events({
 
     Meteor.call('submitSubscription', params, function(error) {
 			if (error) {
-				console.log(error.reason);
+				return console.log(error.reason);
 			} else {
 				console.log('method called ' + params);
 			}
 		});
+
+    Meteor.call('saveSubscription', params, function(error) {
+      if (error) {
+        return console.log(error.reason);
+			} else {
+				console.log('subscription saved ' + params);
+			}
+    });
 	}
 });

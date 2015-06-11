@@ -8,11 +8,11 @@ Meteor.methods({
     this.unblock();
 
     // check if name was entered
-    if (!attributes.FNAME) {
+    if (!attributes.name) {
       throw new Meteor.Error('no-name-input', 'Please enter your full name');
     }
     // check if email was entered
-    if (!attributes.EMAIL) {
+    if (!attributes.email) {
       throw new Meteor.Error('no-email-input', 'Please enter your email');
     }
 
@@ -39,11 +39,11 @@ Meteor.methods({
     var now = new Date();
 
     // check if name was entered
-    if (!attributes.FNAME) {
+    if (!attributes.name) {
       throw new Meteor.Error('no-name-input', 'Please enter your full name');
     }
     // check if email was entered
-    if (!attributes.EMAIL) {
+    if (!attributes.email) {
       throw new Meteor.Error('no-email-input', 'Please enter your email');
     }
 

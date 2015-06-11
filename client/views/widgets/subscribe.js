@@ -20,10 +20,11 @@ Template['subscribe'].events({
 
     Meteor.call('saveSubscription', params, function(error) {
       if (error) {
+        FlashMessages.sendError(error.reason);
         return console.log(error.reason);
 			} else {
         $form[0].reset();
-				console.log('subscription saved ' + params);
+        FlashMessages.sendSuccess('Subscription saved!');
 			}
     });
 	}

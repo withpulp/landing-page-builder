@@ -2,12 +2,13 @@ Template['subscribe'].events({
   'submit .subscribe.form': function(e, tpl) {
 		e.preventDefault();
 
-    var params = {
+    var $form = tpl.$('.subscribe.form'),
+        params = {
           name: tpl.$('input[name=name]').val(),
           email: tpl.$('input[name=email]').val()
         };
 
-    /*
+    /* @TODO: tie in mailchimp http post into method
     Meteor.call('submitSubscription', params, function(error) {
 			if (error) {
 				return console.log(error.reason);
@@ -21,6 +22,7 @@ Template['subscribe'].events({
       if (error) {
         return console.log(error.reason);
 			} else {
+        $form[0].reset();
 				console.log('subscription saved ' + params);
 			}
     });

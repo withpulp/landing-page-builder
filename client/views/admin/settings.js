@@ -32,3 +32,9 @@ Template.settings.events({
     }
   }
 });
+
+Template['settings'].events({
+  'click .export.subscriptions': function(e) {
+    console.log('exporting subscriptions to csv');
+  }
+});

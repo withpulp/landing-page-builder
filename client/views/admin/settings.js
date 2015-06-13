@@ -34,7 +34,7 @@ Template.settings.events({
 });
 
 Template['settings'].events({
-  'click .export.subscriptions': function(e) {
+  'click .export.button': function(e) {
     console.log('exporting subscriptions to csv');
   }
 });

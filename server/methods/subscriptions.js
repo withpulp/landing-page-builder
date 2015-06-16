@@ -55,5 +55,8 @@ Meteor.methods({
     var subscription = Subscriptions.insert(newSubscription);
 
     return subscription;
+  },
+  exportSubscription: function() {
+    
   }
 });

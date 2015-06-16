@@ -95,6 +95,7 @@ BrowserPolicy.content.allowOriginForAll(YOUR_URL);
   * [aldeed:collection2](https://github.com/aldeed/meteor-collection2)
   * [aldeed:simple-schema](https://github.com/aldeed/meteor-simple-schema)
   * [aldeed:autoform](https://github.com/aldeed/meteor-autoform)
+  * [lfergon:exportcsv](https://github.com/lfergon/meteor-export-csv)
 * UI and UX
   * [fastclick](https://github.com/meteor/meteor/tree/devel/packages/fastclick)
   * [natestrauser:animate-css](https://github.com/nate-strauser/meteor-animate-css/)

@@ -36,5 +36,14 @@ Template.settings.events({
 Template['settings'].events({
   'click .export.button': function(e) {
     console.log('exporting subscriptions to csv');
+
+    var file = 'subscriptions.csv';
+    Meteor.call('exportSubscription', function(err, fileContent) {
+      if (fileContent) {
+        var blob = new Blob([fileContent], {
+                     type: 'text/plain;charset=utf-8'
+                   }); saveAs(blob, file);
+      }
+    });
   }
 });

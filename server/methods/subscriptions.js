@@ -57,6 +57,6 @@ Meteor.methods({
     return subscription;
   },
   exportSubscription: function() {
-    
+    return exportcsv.exportToCSV(Subscriptions.find().fetch());
   }
 });
